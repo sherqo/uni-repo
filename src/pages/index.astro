@@ -1,17 +1,226 @@
 ---
-
+import PageLayout from '@/components/layouts/PageLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
+
+  {/* Header */}
+  <header class="my-8">
+    <h1 class="mb-1 text-2xl font-bold">CAIE 23P · Junior Repo</h1>
+    <p class="text-muted-foreground text-sm m-0">
+      Voluntary student collaboration. May contain mistakes.
+      We're trying to keep things updated as possible.
+    </p>
+    <p class="text-muted-foreground text-sm mt-1 m-0">
+      Last updated: <strong class="text-foreground">1 Mar 2026</strong> · We are in <strong class="text-foreground">Week 4</strong>
+    </p>
+  </header>
+
+  <div class="bg-border h-px my-6"></div>
+
+  {/* Links & Resources */}
+  <section class="space-y-4">
+    <h2 class="text-lg font-semibold mt-0">Links &amp; Resources</h2>
+    <table class="w-full text-sm not-prose border-collapse">
+      <tbody>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 text-muted-foreground w-32">Schedule</td>
+          <td class="py-2"><a href="#" class="text-primary hover:underline">CESS/CAIE Schedule – Spring 2026</a></td>
+        </tr>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 text-muted-foreground">Drive</td>
+          <td class="py-2"><a href="#" class="text-primary hover:underline">Semester 6 – Spring 2026</a></td>
+        </tr>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 text-muted-foreground">Electives</td>
+          <td class="py-2">
+            <a href="#" class="text-primary hover:underline">CSE3xx</a>
+            <span class="text-muted-foreground mx-1">/</span>
+            <a href="#" class="text-primary hover:underline">CSE4xx</a>
+          </td>
+        </tr>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 text-muted-foreground">WhatsApp</td>
+          <td class="py-2"><a href="#" class="text-primary hover:underline">CAIE Junior Announcements</a></td>
+        </tr>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 text-muted-foreground">UEL</td>
+          <td class="py-2">
+            <a href="#" class="text-primary hover:underline">Official</a>
+            <span class="text-muted-foreground mx-1">/</span>
+            <a href="#" class="text-primary hover:underline">Ours</a>
+          </td>
+        </tr>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 text-muted-foreground">Bylaws</td>
+          <td class="py-2">
+            <a href="#" class="text-primary hover:underline">Bylaw 2023</a>
+            <span class="text-muted-foreground mx-1">/</span>
+            <a href="#" class="text-primary hover:underline">Bylaw 2023 Brief-ICHEP</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="py-2 pr-4 text-muted-foreground">Course Tree</td>
+          <td class="py-2"><a href="#" class="text-primary hover:underline">Updated 23P course tree</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="bg-border h-px my-6"></div>
+
+  {/* Quizzes */}
+  <section class="space-y-4">
+    <h2 class="text-lg font-semibold mt-0">Quizzes &amp; Assessments</h2>
+    <table class="w-full text-sm not-prose border-collapse">
+      <thead>
+        <tr class="border-b border-border">
+          <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-32">Date</th>
+          <th class="py-2 text-left text-muted-foreground font-medium">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-border">
+          <td class="py-2 pr-4 font-mono text-xs text-foreground">07 Mar</td>
+          <td class="py-2">Agile quiz in the Lecture — till week 4 content</td>
+        </tr>
+        <tr>
+          <td class="py-2 pr-4 font-mono text-xs text-muted-foreground">TBA</td>
+          <td class="py-2 text-muted-foreground">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="bg-border h-px my-6"></div>
+
+  {/* Recordings */}
+  <section class="space-y-4">
+    <h2 class="text-lg font-semibold mt-0">Recordings – Spring 2026</h2>
+    <p class="text-sm text-muted-foreground m-0">
+      MS Teams recordings expire in 60 days — save them before they're gone.
+      Want to contribute? <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline">Contact me.</a>
+    </p>
+
+    {/* Distributed Computing */}
+    <div>
+      <h3 class="text-base font-medium mb-2">Distributed Computing</h3>
+      <table class="w-full text-sm not-prose border-collapse">
+        <thead>
+          <tr class="border-b border-border">
+            <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-40">Session</th>
+            <th class="py-2 text-left text-muted-foreground font-medium">Links</th>
+            <th class="py-2 pl-4 text-left text-muted-foreground font-medium w-36">Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-border">
+            <td class="py-2 pr-4 text-muted-foreground">Old playlist</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">YouTube Playlist</a></td>
+            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-2 pr-4 text-muted-foreground">Lec 2 · Dr. Ayman Bahaa</td>
+            <td class="py-2">
+              <a href="#" class="text-primary hover:underline">Part 1</a>
+              <span class="text-muted-foreground mx-1">/</span>
+              <a href="#" class="text-primary hover:underline">Part 2</a>
+              <span class="text-muted-foreground ml-1 text-xs">(Teams)</span>
+            </td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">20 Apr 2026</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-2 pr-4 text-muted-foreground">Lec 2 · Dr. Hossam</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">One Drive</a></td>
+            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-2 pr-4 text-muted-foreground">Tut 1 · Eng. Alaa Hamdy</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">Teams</a></td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">21 Apr 2026</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 text-muted-foreground">Tut 1 · Eng. Andrew</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">Teams</a></td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">22 Apr 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* Deep Learning */}
+    <div>
+      <h3 class="text-base font-medium mb-2">Deep Learning</h3>
+      <table class="w-full text-sm not-prose border-collapse">
+        <thead>
+          <tr class="border-b border-border">
+            <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-40">Session</th>
+            <th class="py-2 text-left text-muted-foreground font-medium">Links</th>
+            <th class="py-2 pl-4 text-left text-muted-foreground font-medium w-36">Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-border">
+            <td class="py-2 pr-4 text-muted-foreground">Lecture 2</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">Link</a></td>
+            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+          </tr>
+          <tr>
+            <td class="py-2 pr-4 text-muted-foreground">Lecture 3</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">Link</a></td>
+            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    {/* IoT */}
+    <div>
+      <h3 class="text-base font-medium mb-2">Internet of Things</h3>
+      <table class="w-full text-sm not-prose border-collapse">
+        <thead>
+          <tr class="border-b border-border">
+            <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-40">Session</th>
+            <th class="py-2 text-left text-muted-foreground font-medium">Links</th>
+            <th class="py-2 pl-4 text-left text-muted-foreground font-medium w-36">Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-2 pr-4 text-muted-foreground">Lecture 2</td>
+            <td class="py-2"><a href="#" class="text-primary hover:underline">Teams</a></td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">18 Apr 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="bg-border h-px my-6"></div>
+
+  {/* Credits */}
+  <section class="space-y-2 pb-4">
+    <h2 class="text-lg font-semibold mt-0">Credits</h2>
+    <p class="text-sm text-muted-foreground m-0">Thanks to all contributors ❤️</p>
+    <p class="text-sm text-muted-foreground m-0 leading-relaxed">
+      Sharqawy Wael ·
+      <a href="mailto:tyoussef050@gmail.com" class="text-primary hover:underline">tyoussef050</a> ·
+      <a href="mailto:sara.swelam@gmail.com" class="text-primary hover:underline">sara.swelam</a> ·
+      <a href="mailto:himoabdelfattah@gmail.com" class="text-primary hover:underline">himoabdelfattah</a> ·
+      <a href="mailto:amgaa67056321@gmail.com" class="text-primary hover:underline">amgaa67056321</a> ·
+      <a href="mailto:pavlyghalysedhom@gmail.com" class="text-primary hover:underline">pavlyghalysedhom</a> ·
+      <a href="mailto:omara862005@gmail.com" class="text-primary hover:underline">omara862005</a> ·
+      <a href="mailto:renadibrahim@gmail.com" class="text-primary hover:underline">renadibrahim</a> ·
+      <a href="mailto:abdelmoneimmahmoud2005@gmail.com" class="text-primary hover:underline">abdelmoneimmahmoud2005</a> ·
+      <a href="mailto:nadaserour767@gmail.com" class="text-primary hover:underline">nadaserour767</a> ·
+      <a href="mailto:ezzeldinismail112@gmail.com" class="text-primary hover:underline">ezzeldinismail112</a> ·
+      Esraa Mostafa notes · Marwan Ahmed ·
+      <a href="mailto:mobeder88@gmail.com" class="text-primary hover:underline">mobeder88</a>
+    </p>
+    <p class="text-sm text-muted-foreground m-0">
+      Want to contribute? <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline">Contact me.</a>
+    </p>
+  </section>
+
+</PageLayout>
+
