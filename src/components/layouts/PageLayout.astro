@@ -1,5 +1,5 @@
 ---
-import RootLayout from '@/components/layouts/RootLayout.astro';
+import '@/global.css';
 import Footer from '@/components/Footer.astro';
 import Nav from '@/components/Nav.astro';
 
@@ -8,13 +8,33 @@ export interface Props {
   description?: string;
 }
 
-const { title, description } = Astro.props;
+const {
+  title = 'CAIE 23P',
+  description = 'Voluntary student collaboration hub for CAIE 23P juniors at Ain Shams University.',
+} = Astro.props;
+
+const fullTitle = title === 'CAIE 23P' ? title : `${title} · CAIE 23P`;
 ---
 
-<RootLayout title={title} description={description}>
-  <Nav />
-  <main class="flex-1 w-full max-w-3xl mx-auto px-4 py-8">
-    <slot />
-  </main>
-  <Footer />
-</RootLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <link rel="canonical" href={Astro.url} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+  </head>
+  <body>
+    <Nav />
+    <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

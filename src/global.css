@@ -29,7 +29,7 @@ html {
 :root {
   --background: #ffffff;
   --foreground: #0f1013;
-  --primary: #4f46e5;
+  --primary: #0084ff;
   --primary-foreground: #f8f8f2;
   --muted: #f0f0ff;
   --muted-foreground: #6b6b80;
@@ -39,7 +39,7 @@ html {
 .dark {
   --background: #101012;
   --foreground: #f8f8f2;
-  --primary: #818cf8;
+  --primary: #00aeff;
   --primary-foreground: #f8f8f2;
   --muted: #1e1e2e;
   --muted-foreground: #8b8ba0;

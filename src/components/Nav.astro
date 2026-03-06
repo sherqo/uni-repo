@@ -7,9 +7,11 @@ const links = [
 const current = Astro.url.pathname;
 ---
 
-<nav class="w-full border-b">
+<nav class="border-border/40 w-full border-b">
   <div class="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
-    <a href="/" class="text-foreground hover:text-primary font-semibold no-underline text-base">
+    <a
+      href="/"
+      class="text-foreground hover:text-primary text-base font-semibold no-underline">
       CAIE 23P
     </a>
     <div class="flex items-center gap-6">
@@ -21,8 +23,7 @@ const current = Astro.url.pathname;
               current === href
                 ? 'text-primary font-medium'
                 : 'text-muted-foreground hover:text-foreground'
-            }`}
-          >
+            }`}>
             {label}
           </a>
         ))
@@ -31,12 +32,29 @@ const current = Astro.url.pathname;
       <button
         id="tt"
         class="hover:text-primary text-muted-foreground h-5 w-5 cursor-pointer"
-        aria-label="Toggle theme"
-      >
-        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden h-5 w-5">
+        aria-label="Toggle theme">
+        <svg
+          id="icon-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="hidden h-5 w-5">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
-        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden h-5 w-5">
+        <svg
+          id="icon-sun"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="hidden h-5 w-5">
           <circle cx="12" cy="12" r="5"></circle>
           <line x1="12" y1="1" x2="12" y2="3"></line>
           <line x1="12" y1="21" x2="12" y2="23"></line>
