@@ -20,7 +20,11 @@ const { contributors } = Astro.props;
         <>
           {i > 0 && <span class="mx-1">·</span>}
           {c.email ? (
-            <a href={`mailto:${c.email}`} class="text-primary hover:underline">
+            <a
+              href={`mailto:${c.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">
               {c.name}
             </a>
           ) : (
@@ -32,8 +36,8 @@ const { contributors } = Astro.props;
   </p>
   <p class="text-muted-foreground m-0 text-sm">
     Want to contribute? <a
-      href="mailto:sherqo@sherqo.me"
-      class="text-primary hover:underline">Contact me.</a
+      href="/about#contribute"
+      class="text-primary hover:underline">See how.</a
     >
   </p>
 </section>

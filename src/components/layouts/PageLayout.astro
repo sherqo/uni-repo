@@ -1,6 +1,5 @@
 ---
 import '@/global.css';
-import Footer from '@/components/Footer.astro';
 import Nav from '@/components/Nav.astro';
 
 export interface Props {
@@ -35,6 +34,5 @@ const fullTitle = title === 'CAIE 23P' ? title : `${title} · CAIE 23P`;
     <main class="mx-auto w-full max-w-3xl flex-1 px-4 py-8">
       <slot />
     </main>
-    <Footer />
   </body>
 </html>

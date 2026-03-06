@@ -1,8 +1,5 @@
 ---
-const links = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-];
+const links = [{ href: '/about', label: 'About' }];
 
 const current = Astro.url.pathname;
 ---
@@ -28,6 +25,13 @@ const current = Astro.url.pathname;
           </a>
         ))
       }
+      <a
+        href="https://github.com/sherqo/uni-repo"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-muted-foreground hover:text-foreground text-sm no-underline transition-colors">
+        GitHub
+      </a>
       <div class="bg-border h-4 w-px"></div>
       <button
         id="tt"

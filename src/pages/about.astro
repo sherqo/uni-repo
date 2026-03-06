@@ -3,33 +3,51 @@ import PageLayout from '@/components/layouts/PageLayout.astro';
 ---
 
 <PageLayout title="About" description="About the CAIE 23P Junior Repo.">
-  <header class="my-8">
-    <h1 class="mb-1 text-2xl font-bold">About</h1>
+  <header class="mb-6">
+    <h1 class="mb-1 text-4xl font-bold tracking-tight">About</h1>
+    <p class="text-muted-foreground text-sm">What this is and how it works.</p>
   </header>
 
-  <div class="space-y-4 text-sm leading-relaxed">
-    <p>
-      This is an unofficial, student-maintained repo for the CAIE 23P batch at
-      <strong>Ain Shams University – Faculty of Engineering</strong>.
-    </p>
-    <p>
-      We share schedules, recordings, notes, and anything useful to help each
-      other get through the semester. Content is voluntary — no guarantees on
-      accuracy or completeness.
-    </p>
-    <p>
-      Maintained by <strong>Sharqawy Wael</strong>. Built with <a
-        href="https://astro.build"
-        class="text-primary hover:underline"
-        target="_blank"
-        rel="noopener noreferrer">Astro</a
-      >.
-    </p>
-    <p>
-      Want to add something?
-      <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline"
-        >Drop me a message.</a
-      >
-    </p>
+  <div class="space-y-6 text-sm leading-relaxed">
+    <section class="space-y-2">
+      <h2 class="text-xl font-semibold">What is this?</h2>
+      <p class="text-muted-foreground">
+        Unofficial student hub for the <strong class="text-foreground"
+          >CAIE 23P</strong
+        > batch at Ain Shams University – Faculty of Engineering.
+      </p>
+
+      <section class="space-y-2">
+        <h2 class="text-xl font-semibold">What's on here?</h2>
+        <ul class="text-muted-foreground list-inside list-disc space-y-1">
+          <li>Semester schedule & Drive folders</li>
+          <li>Lecture & tutorial recordings (with expiry dates)</li>
+          <li>Upcoming quizzes & assessments</li>
+          <li>UEL docs, bylaws, course tree</li>
+        </ul>
+      </section>
+
+      <section id="contribute" class="space-y-2">
+        <h2 class="text-xl font-semibold">Contribute</h2>
+        <p class="text-muted-foreground">
+          Open a PR on <a
+            href="https://github.com/sherqo/uni-repo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:underline">GitHub</a
+          > or <a
+            href="mailto:sherqo@sherqo.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:underline">email me</a
+          > and I'll add it.
+        </p>
+        <ul class="text-muted-foreground list-inside list-disc space-y-1">
+          <li>For recordings: share the link + session name + expiry date.</li>
+          <li>For notes/sheets: a Drive link is enough.</li>
+          <li>For quiz dates: date + subject + what it covers.</li>
+        </ul>
+      </section>
+    </section>
   </div>
 </PageLayout>
