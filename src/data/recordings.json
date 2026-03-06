@@ -14,6 +14,28 @@
         "expires": null
       },
       {
+      "label": "Distributed Computing Lectures Playlist",
+      "links": [
+        {
+          "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EH7F_Kt5K0nmXQVRdjYodO0",
+          "text": "YouTube Playlist"
+        }
+      ],
+      "badge": "YouTube",
+      "expires": null
+    },
+      {
+      "label": "Distributed Computing Tutorials Playlist",
+      "links": [
+        {
+          "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EFOvyrugUvSx9Sa6EVd46Hv",
+          "text": "YouTube Playlist"
+        }
+      ],
+      "badge": "YouTube",
+      "expires": null
+    },
+      {
         "label": "Lec 2 · Dr. Ayman Bahaa",
         "links": [
           {
