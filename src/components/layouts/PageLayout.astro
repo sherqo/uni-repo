@@ -7,10 +7,8 @@ export interface Props {
   description?: string;
 }
 
-const {
-  title = 'CAIE 23P',
-  description = 'Voluntary student collaboration hub for CAIE 23P juniors at Ain Shams University.',
-} = Astro.props;
+const { title = 'CAIE 23P', description = 'Voluntary student collaboration hub for CAIE 23P juniors at Ain Shams University.' } =
+  Astro.props;
 
 const fullTitle = title === 'CAIE 23P' ? title : `${title} · CAIE 23P`;
 ---

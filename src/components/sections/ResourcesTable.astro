@@ -28,11 +28,7 @@ const { resources } = Astro.props;
               {row.links.map((link, j) => (
                 <>
                   {j > 0 && <span class="text-muted-foreground mx-1">/</span>}
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-primary hover:underline">
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
                     {link.text}
                   </a>
                 </>

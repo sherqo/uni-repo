@@ -20,11 +20,7 @@ const { contributors } = Astro.props;
         <>
           {i > 0 && <span class="mx-1">·</span>}
           {c.link ? (
-            <a
-              href={c.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-primary hover:underline">
+            <a href={c.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
               {c.name}
             </a>
           ) : (
@@ -35,9 +31,6 @@ const { contributors } = Astro.props;
     }
   </p>
   <p class="text-muted-foreground m-0 text-sm">
-    Want to contribute? <a
-      href="/about#contribute"
-      class="text-primary hover:underline">See how.</a
-    >
+    Want to contribute? <a href="/about#contribute" class="text-primary hover:underline">See how.</a>
   </p>
 </section>
