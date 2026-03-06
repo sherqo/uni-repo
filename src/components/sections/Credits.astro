@@ -1,0 +1,38 @@
+---
+interface Contributor {
+  name: string;
+  email: string | null;
+}
+
+interface Props {
+  contributors: Contributor[];
+}
+
+const { contributors } = Astro.props;
+---
+
+<section class="space-y-2 pb-4">
+  <h2 class="mt-0 text-2xl font-semibold">Credits</h2>
+  <p class="text-muted-foreground m-0 text-sm">Thanks to all contributors ❤️</p>
+  <p class="text-muted-foreground m-0 text-sm leading-relaxed">
+    {
+      contributors.map((c, i) => (
+        <>
+          {i > 0 && <span class="mx-1">·</span>}
+          {c.email ? (
+            <a href={`mailto:${c.email}`} class="text-primary hover:underline">
+              {c.name}
+            </a>
+          ) : (
+            <span>{c.name}</span>
+          )}
+        </>
+      ))
+    }
+  </p>
+  <p class="text-muted-foreground m-0 text-sm">
+    Want to contribute? <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline"
+      >Contact me.</a
+    >
+  </p>
+</section>

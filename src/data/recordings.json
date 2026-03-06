@@ -1,0 +1,109 @@
+[
+  {
+    "course": "Distributed Computing",
+    "sessions": [
+      {
+        "label": "Old playlist",
+        "links": [
+          {
+            "href": "https://youtube.com/playlist?list=PLy_2fgXkPiZvK4_PJm56Tsmlx4A4Cee8s&si=f4o4VgmknLfUTp47",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      },
+      {
+        "label": "Lec 2 · Dr. Ayman Bahaa",
+        "links": [
+          {
+            "href": "https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAX4QTRXEU4ZQFHIBZPKTEQUFYKI&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_213238-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_213238-Meeting+Recording.mp4%3Fweb%3D1&iCalUid=040000008200E00074C5B7101A82E00807EA0215B8DF255F64A3DC010000000000000000100000008453417611F5E74BA760980FD4CCA514&masterICalUid=040000008200e00074c5b7101a82e00800000000b8df255f64a3dc010000000000000000100000008453417611f5e74ba760980fd4cca514&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=786ffa67-c979-48cc-b802-66d42eb3bc36&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bb01bf51-fab3-40ff-9ec4-50595ecfc6a9&threadType=space&meetingType=Recurring&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771700439928&subType=RecapSharingLink_RecapCore",
+            "text": "Part 1"
+          },
+          {
+            "href": "https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAWWKXSCYYJPOREYPNWIVYDFUWT2&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_224310-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_224310-Meeting+Recording.mp4%3Fweb%3D1&iCalUid=040000008200E00074C5B7101A82E00807EA0215B8DF255F64A3DC010000000000000000100000008453417611F5E74BA760980FD4CCA514&masterICalUid=040000008200e00074c5b7101a82e00800000000b8df255f64a3dc010000000000000000100000008453417611f5e74ba760980fd4cca514&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=786ffa67-c979-48cc-b802-66d42eb3bc36&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bb01bf51-fab3-40ff-9ec4-50595ecfc6a9&threadType=space&meetingType=Recurring&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771700439928&subType=RecapSharingLink_RecapCore",
+            "text": "Part 2"
+          }
+        ],
+        "badge": "Teams",
+        "expires": "20 Apr 2026"
+      },
+      {
+        "label": "Lec 2 · Dr. Hossam",
+        "links": [
+          {
+            "href": "https://1drv.ms/v/c/eff459d89f41aeff/IQDiCO2mi-10QKjstks8o-xYAV9fSgZdfLz7VnE3N3F_Tdg?e=mFe1yz",
+            "text": "One Drive"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      },
+      {
+        "label": "Tut 1 · Eng. Alaa Hamdy",
+        "links": [
+          {
+            "href": "https://engasuedu.sharepoint.com/:v:/s/CSE362UG2023-DistributedComputing40591/IQCI-bCS4fS7TIwZaPyF0Ps1AXaBVhWy6UwTqwiKetRCHkw",
+            "text": "Teams"
+          }
+        ],
+        "badge": null,
+        "expires": "21 Apr 2026"
+      },
+      {
+        "label": "Tut 1 · Eng. Andrew",
+        "links": [
+          {
+            "href": "https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAVT2BRM7Z4E2BF2ISONW72XT3XY&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2FSection+1%2C+Eng+Andrew-20260223_135958-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2FSection+1%2C+Eng+Andrew-20260223_135958-Meeting+Recording.mp4%3Fweb%3D1&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=dafb272b-5afb-415e-85f4-02ce26e4f264&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bbbd6b38-df11-456d-bc58-b58b52853b8f&threadType=space&meetingType=MeetNow&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771847586600&subType=RecapSharingLink_RecapCore",
+            "text": "Teams"
+          }
+        ],
+        "badge": null,
+        "expires": "22 Apr 2026"
+      }
+    ]
+  },
+  {
+    "course": "Deep Learning",
+    "sessions": [
+      {
+        "label": "Lecture 2",
+        "links": [
+          {
+            "href": "https://engasuedu-my.sharepoint.com/personal/e07759_eng_asu_edu_eg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe07759%5Feng%5Fasu%5Fedu%5Feg%2FDocuments%2FRecordings%2FLecture%20%5F2%20%28Deep%20Learning%29%2D20260217%5F182935%2DMeeting%20Recording%2Emp4&nav=eyJwbGF5YmFja09wdGlvbnMiOnsic3RhcnRUaW1lSW5TZWNvbmRzIjowLjgzNDk3Mn19&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ee7e2bf53%2D2e8d%2D440e%2D9573%2D106472c0955d",
+            "text": "Stream"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      },
+      {
+        "label": "Lecture 3",
+        "links": [
+          {
+            "href": "https://engasuedu-my.sharepoint.com/personal/e07759_eng_asu_edu_eg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe07759%5Feng%5Fasu%5Fedu%5Feg%2FDocuments%2FRecordings%2FDeep%20Learning%20%28Wednesday%29%20during%20Ramadan%20630%20PM%2D20260225%5F184716%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3da08b56%2D0571%2D4ad8%2D8429%2D4e4b9cebf7f2",
+            "text": "Stream"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      }
+    ]
+  },
+  {
+    "course": "Internet of Things",
+    "sessions": [
+      {
+        "label": "Lecture 2",
+        "links": [
+          {
+            "href": "https://engasuedu.sharepoint.com/:v:/s/CSE365UG2023-InternetofThings40592/IQC5AXq3veB4S7m-PsBGwHvZASYIbGCi1b9gwSN_nu3CjL8?e=0CM2j4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
+            "text": "Teams"
+          }
+        ],
+        "badge": null,
+        "expires": "18 Apr 2026"
+      }
+    ]
+  }
+]
