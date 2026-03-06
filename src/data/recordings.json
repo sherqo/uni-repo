@@ -149,5 +149,21 @@
         "expires": "18 Apr 2026"
       }
     ]
+  },
+  {
+    "course": "Introduction to Machine Learning",
+    "sessions": [
+      {
+        "label": "Tutorials playlist",
+        "links": [
+          {
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EHIkxdqWchebHOitrM40KDQ",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": "YouTube",
+        "expires": null
+      } 
+    ]
   }
 ]
