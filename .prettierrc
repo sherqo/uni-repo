@@ -1,0 +1,16 @@
+{
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+}
