@@ -1,7 +1,7 @@
 ---
 interface Contributor {
   name: string;
-  email: string | null;
+  link: string | null;
 }
 
 interface Props {
@@ -19,9 +19,9 @@ const { contributors } = Astro.props;
       contributors.map((c, i) => (
         <>
           {i > 0 && <span class="mx-1">·</span>}
-          {c.email ? (
+          {c.link ? (
             <a
-              href={`mailto:${c.email}`}
+              href={c.link}
               target="_blank"
               rel="noopener noreferrer"
               class="text-primary hover:underline">

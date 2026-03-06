@@ -14,41 +14,26 @@
         "expires": null
       },
       {
-      "label": "Lectures Playlist",
-      "links": [
-        {
-          "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EH7F_Kt5K0nmXQVRdjYodO0",
-          "text": "YouTube Playlist"
-        }
-      ],
-      "badge": "YouTube",
-      "expires": null
-    },
-      {
-      "label": "Tutorials Playlist",
-      "links": [
-        {
-          "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EFOvyrugUvSx9Sa6EVd46Hv",
-          "text": "YouTube Playlist"
-        }
-      ],
-      "badge": "YouTube",
-      "expires": null
-    },
-      {
-        "label": "Lec 2 · Dr. Ayman Bahaa",
+        "label": "Lectures Playlist",
         "links": [
           {
-            "href": "https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAX4QTRXEU4ZQFHIBZPKTEQUFYKI&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_213238-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_213238-Meeting+Recording.mp4%3Fweb%3D1&iCalUid=040000008200E00074C5B7101A82E00807EA0215B8DF255F64A3DC010000000000000000100000008453417611F5E74BA760980FD4CCA514&masterICalUid=040000008200e00074c5b7101a82e00800000000b8df255f64a3dc010000000000000000100000008453417611f5e74ba760980fd4cca514&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=786ffa67-c979-48cc-b802-66d42eb3bc36&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bb01bf51-fab3-40ff-9ec4-50595ecfc6a9&threadType=space&meetingType=Recurring&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771700439928&subType=RecapSharingLink_RecapCore",
-            "text": "Part 1"
-          },
-          {
-            "href": "https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAWWKXSCYYJPOREYPNWIVYDFUWT2&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_224310-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_224310-Meeting+Recording.mp4%3Fweb%3D1&iCalUid=040000008200E00074C5B7101A82E00807EA0215B8DF255F64A3DC010000000000000000100000008453417611F5E74BA760980FD4CCA514&masterICalUid=040000008200e00074c5b7101a82e00800000000b8df255f64a3dc010000000000000000100000008453417611f5e74ba760980fd4cca514&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=786ffa67-c979-48cc-b802-66d42eb3bc36&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bb01bf51-fab3-40ff-9ec4-50595ecfc6a9&threadType=space&meetingType=Recurring&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771700439928&subType=RecapSharingLink_RecapCore",
-            "text": "Part 2"
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EH7F_Kt5K0nmXQVRdjYodO0",
+            "text": "YouTube Playlist"
           }
         ],
-        "badge": "Teams",
-        "expires": "20 Apr 2026"
+        "badge": null,
+        "expires": null
+      },
+      {
+        "label": "Tutorials Playlist",
+        "links": [
+          {
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EFOvyrugUvSx9Sa6EVd46Hv",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": null,
+        "expires": null
       },
       {
         "label": "Lec 2 · Dr. Hossam",
@@ -60,17 +45,6 @@
         ],
         "badge": null,
         "expires": null
-      },
-      {
-        "label": "Tut 1 · Eng. Alaa Hamdy",
-        "links": [
-          {
-            "href": "https://engasuedu.sharepoint.com/:v:/s/CSE362UG2023-DistributedComputing40591/IQCI-bCS4fS7TIwZaPyF0Ps1AXaBVhWy6UwTqwiKetRCHkw",
-            "text": "Teams"
-          }
-        ],
-        "badge": null,
-        "expires": "21 Apr 2026"
       },
       {
         "label": "Tut 1 · Eng. Andrew",
@@ -85,6 +59,24 @@
       }
     ]
   },
+
+  {
+    "course": "Introduction to Machine Learning",
+    "sessions": [
+      {
+        "label": "Tutorials playlist",
+        "links": [
+          {
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EHIkxdqWchebHOitrM40KDQ",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      }
+    ]
+  },
+
   {
     "course": "Deep Learning",
     "sessions": [
@@ -112,6 +104,7 @@
       }
     ]
   },
+
   {
     "course": "Internet of Things",
     "sessions": [
@@ -136,34 +129,7 @@
         ],
         "badge": null,
         "expires": null
-      },
-      {
-        "label": "Lecture 2",
-        "links": [
-          {
-            "href": "https://engasuedu.sharepoint.com/:v:/s/CSE365UG2023-InternetofThings40592/IQC5AXq3veB4S7m-PsBGwHvZASYIbGCi1b9gwSN_nu3CjL8?e=0CM2j4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
-            "text": "Teams"
-          }
-        ],
-        "badge": null,
-        "expires": "18 Apr 2026"
       }
-    ]
-  },
-  {
-    "course": "Introduction to Machine Learning",
-    "sessions": [
-      {
-        "label": "Tutorials playlist",
-        "links": [
-          {
-            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EHIkxdqWchebHOitrM40KDQ",
-            "text": "YouTube Playlist"
-          }
-        ],
-        "badge": "YouTube",
-        "expires": null
-      } 
     ]
   }
 ]
