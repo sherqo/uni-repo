@@ -116,6 +116,28 @@
     "course": "Internet of Things",
     "sessions": [
       {
+        "label": "Lectures playlist",
+        "links": [
+          {
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EGoDuv9K2JDmW1XKqHMNw2L",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      },
+      {
+        "label": "Labs playlist",
+        "links": [
+          {
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EEbP5cNwgErVb_p-LGyMaUn",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": null,
+        "expires": null
+      },
+      {
         "label": "Lecture 2",
         "links": [
           {
