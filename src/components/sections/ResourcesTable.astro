@@ -23,7 +23,7 @@ const { resources } = Astro.props;
       {
         resources.map((row, i) => (
           <tr class={i < resources.length - 1 ? 'border-border border-b' : ''}>
-            <td class="text-muted-foreground w-32 py-2 pr-4">{row.label}</td>
+            <td class="w-32 py-2 pr-4">{row.label}</td>
             <td class="py-2">
               {row.links.map((link, j) => (
                 <>

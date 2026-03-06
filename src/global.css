@@ -41,11 +41,11 @@ html {
 
 .dark {
   --background: #101012;
-  --foreground: #f8f8f2;
+  --foreground: #f7f7f3;
   --primary: #00aeff;
-  --primary-foreground: #f8f8f2;
+  --primary-foreground: #fafaf8;
   --muted: #1e1e2e;
-  --muted-foreground: #8b8ba0;
+  --muted-foreground: #c3c3c6;
   --border: #44475a;
   --warning: #fbbf24;
 }
