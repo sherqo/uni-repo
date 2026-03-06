@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: monospace;
+  --font-primary: var(--font-sans);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f1013;
+  --primary: #4f46e5;
+  --primary-foreground: #f8f8f2;
+  --muted: #f0f0ff;
+  --muted-foreground: #6b6b80;
+  --border: #d1d1d8;
+}
+
+.dark {
+  --background: #101012;
+  --foreground: #f8f8f2;
+  --primary: #818cf8;
+  --primary-foreground: #f8f8f2;
+  --muted: #1e1e2e;
+  --muted-foreground: #8b8ba0;
+  --border: #44475a;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply prose prose-neutral dark:prose-invert prose-base;
+    @apply prose-a:text-primary;
+    @apply prose-hr:border-border max-w-full;
+    @apply prose-img:my-4;
+  }
+
+  body {
+    @apply mx-auto flex min-h-screen max-w-full flex-col;
+    @apply font-primary text-foreground bg-background antialiased;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
