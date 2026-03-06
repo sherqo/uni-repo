@@ -2,147 +2,271 @@
 import PageLayout from '@/components/layouts/PageLayout.astro';
 ---
 
-<PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
-
+<PageLayout
+  title="CAIE 23P"
+  description="Voluntary student collaboration hub for CAIE 23P juniors.">
   {/* Header */}
   <header class="my-8">
     <h1 class="mb-1 text-2xl font-bold">CAIE 23P · Junior Repo</h1>
-    <p class="text-muted-foreground text-sm m-0">
-      Voluntary student collaboration. May contain mistakes.
-      We're trying to keep things updated as possible.
+    <p class="text-muted-foreground m-0 text-sm">
+      Voluntary student collaboration. May contain mistakes. We're trying to
+      keep things updated as possible.
     </p>
-    <p class="text-muted-foreground text-sm mt-1 m-0">
-      Last updated: <strong class="text-foreground">1 Mar 2026</strong> · We are in <strong class="text-foreground">Week 4</strong>
+    <p class="text-muted-foreground m-0 mt-1 text-sm">
+      Last updated: <strong class="text-foreground">1 Mar 2026</strong> · We are in
+      <strong class="text-foreground">Week 4</strong>
     </p>
   </header>
 
-  <div class="bg-border h-px my-6"></div>
+  <div class="bg-border my-6 h-px"></div>
 
   {/* Links & Resources */}
   <section class="space-y-4">
-    <h2 class="text-lg font-semibold mt-0">Links &amp; Resources</h2>
-    <table class="w-full text-sm not-prose border-collapse">
+    <h2 class="mt-0 text-lg font-semibold">Links &amp; Resources</h2>
+    <table class="not-prose w-full border-collapse text-sm">
       <tbody>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 text-muted-foreground w-32">Schedule</td>
-          <td class="py-2"><a href="#" class="text-primary hover:underline">CESS/CAIE Schedule – Spring 2026</a></td>
+        <tr class="border-border border-b">
+          <td class="text-muted-foreground w-32 py-2 pr-4">Schedule</td>
+          <td class="py-2"
+            ><a
+              href="https://docs.google.com/spreadsheets/d/1L4mpYWvXt4fn9t_Uh_tukfwPmcTajAEOe9xEhJC9bRs/edit?gid=1307724554#gid=1307724554"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline"
+              >CESS/CAIE Schedule – Spring 2026</a
+            ></td
+          >
         </tr>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 text-muted-foreground">Drive</td>
-          <td class="py-2"><a href="#" class="text-primary hover:underline">Semester 6 – Spring 2026</a></td>
+        <tr class="border-border border-b">
+          <td class="text-muted-foreground py-2 pr-4">Drive</td>
+          <td class="py-2"
+            ><a
+              href="https://drive.google.com/drive/folders/1dAD5NoibYQrV5GFoRau0DLgF2W2BDvUQ?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">Semester 6 – Spring 2026</a
+            ></td
+          >
         </tr>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 text-muted-foreground">Electives</td>
+        <tr class="border-border border-b">
+          <td class="text-muted-foreground py-2 pr-4">Electives</td>
           <td class="py-2">
-            <a href="#" class="text-primary hover:underline">CSE3xx</a>
+            <a
+              href="https://drive.google.com/drive/folders/1hi8kJ0AtvxmPWVGFSMcuPShFUv7qwRNV?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">CSE3xx</a
+            >
             <span class="text-muted-foreground mx-1">/</span>
-            <a href="#" class="text-primary hover:underline">CSE4xx</a>
+            <a
+              href="https://drive.google.com/drive/folders/1mptwHeXYcRr_VOSBlrivjFJNEr0EIk-b?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">CSE4xx</a
+            >
           </td>
         </tr>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 text-muted-foreground">WhatsApp</td>
-          <td class="py-2"><a href="#" class="text-primary hover:underline">CAIE Junior Announcements</a></td>
+        <tr class="border-border border-b">
+          <td class="text-muted-foreground py-2 pr-4">WhatsApp</td>
+          <td class="py-2"
+            ><a
+              href="https://chat.whatsapp.com/CrmyFB3XmQ1IbWmdUVYwWI"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">CAIE Junior Announcements</a
+            ></td
+          >
         </tr>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 text-muted-foreground">UEL</td>
+        <tr class="border-border border-b">
+          <td class="text-muted-foreground py-2 pr-4">UEL</td>
           <td class="py-2">
-            <a href="#" class="text-primary hover:underline">Official</a>
+            <a
+              href="https://sites.google.com/view/uel-asu-helping-documents"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">Official</a
+            >
             <span class="text-muted-foreground mx-1">/</span>
-            <a href="#" class="text-primary hover:underline">Ours</a>
+            <a
+              href="https://drive.google.com/drive/folders/14fRanuDUIDEKQxNQesaF0O2t7c7RZF7e?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">Ours</a
+            >
           </td>
         </tr>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 text-muted-foreground">Bylaws</td>
+        <tr class="border-border border-b">
+          <td class="text-muted-foreground py-2 pr-4">Bylaws</td>
           <td class="py-2">
-            <a href="#" class="text-primary hover:underline">Bylaw 2023</a>
+            <a
+              href="https://drive.google.com/file/d/1vbq8sZZFVaTpdfL6lXVs77esOkYZ7hy3/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">Bylaw 2023</a
+            >
             <span class="text-muted-foreground mx-1">/</span>
-            <a href="#" class="text-primary hover:underline">Bylaw 2023 Brief-ICHEP</a>
+            <a
+              href="https://drive.google.com/file/d/12XoDdGfTV-UnaCjrF-YefFah1KcTCYFF/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">Bylaw 2023 Brief-ICHEP</a
+            >
           </td>
         </tr>
         <tr>
-          <td class="py-2 pr-4 text-muted-foreground">Course Tree</td>
-          <td class="py-2"><a href="#" class="text-primary hover:underline">Updated 23P course tree</a></td>
+          <td class="text-muted-foreground py-2 pr-4">Course Tree</td>
+          <td class="py-2"
+            ><a
+              href="https://drive.google.com/file/d/1V5IjmNdtNmETQJMOFf3w5vhUftLPRAIZ/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline">Updated 23P course tree</a
+            ></td
+          >
         </tr>
       </tbody>
     </table>
   </section>
 
-  <div class="bg-border h-px my-6"></div>
+  <div class="bg-border my-6 h-px"></div>
 
   {/* Quizzes */}
   <section class="space-y-4">
-    <h2 class="text-lg font-semibold mt-0">Quizzes &amp; Assessments</h2>
-    <table class="w-full text-sm not-prose border-collapse">
+    <h2 class="mt-0 text-lg font-semibold">Quizzes &amp; Assessments</h2>
+    <table class="not-prose w-full border-collapse text-sm">
       <thead>
-        <tr class="border-b border-border">
-          <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-32">Date</th>
-          <th class="py-2 text-left text-muted-foreground font-medium">Details</th>
+        <tr class="border-border border-b">
+          <th class="text-muted-foreground w-32 py-2 pr-4 text-left font-medium"
+            >Date</th
+          >
+          <th class="text-muted-foreground py-2 text-left font-medium"
+            >Details</th
+          >
         </tr>
       </thead>
       <tbody>
-        <tr class="border-b border-border">
-          <td class="py-2 pr-4 font-mono text-xs text-foreground">07 Mar</td>
+        <tr class="border-border border-b">
+          <td class="text-foreground py-2 pr-4 font-mono text-xs">07 Mar</td>
           <td class="py-2">Agile quiz in the Lecture — till week 4 content</td>
         </tr>
         <tr>
-          <td class="py-2 pr-4 font-mono text-xs text-muted-foreground">TBA</td>
-          <td class="py-2 text-muted-foreground">—</td>
+          <td class="text-muted-foreground py-2 pr-4 font-mono text-xs">TBA</td>
+          <td class="text-muted-foreground py-2">—</td>
         </tr>
       </tbody>
     </table>
   </section>
 
-  <div class="bg-border h-px my-6"></div>
+  <div class="bg-border my-6 h-px"></div>
 
   {/* Recordings */}
   <section class="space-y-4">
-    <h2 class="text-lg font-semibold mt-0">Recordings – Spring 2026</h2>
-    <p class="text-sm text-muted-foreground m-0">
+    <h2 class="mt-0 text-lg font-semibold">Recordings – Spring 2026</h2>
+    <p class="text-muted-foreground m-0 text-sm">
       MS Teams recordings expire in 60 days — save them before they're gone.
-      Want to contribute? <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline">Contact me.</a>
+      Want to contribute? <a
+        href="mailto:sherqo@sherqo.me"
+        class="text-primary hover:underline">Contact me.</a
+      >
     </p>
 
     {/* Distributed Computing */}
     <div>
-      <h3 class="text-base font-medium mb-2">Distributed Computing</h3>
-      <table class="w-full text-sm not-prose border-collapse">
+      <h3 class="mb-2 text-base font-medium">Distributed Computing</h3>
+      <table class="not-prose w-full border-collapse text-sm">
         <thead>
-          <tr class="border-b border-border">
-            <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-40">Session</th>
-            <th class="py-2 text-left text-muted-foreground font-medium">Links</th>
-            <th class="py-2 pl-4 text-left text-muted-foreground font-medium w-36">Expires</th>
+          <tr class="border-border border-b">
+            <th
+              class="text-muted-foreground w-40 py-2 pr-4 text-left font-medium"
+              >Session</th
+            >
+            <th class="text-muted-foreground py-2 text-left font-medium"
+              >Links</th
+            >
+            <th
+              class="text-muted-foreground w-36 py-2 pl-4 text-left font-medium"
+              >Expires</th
+            >
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b border-border">
-            <td class="py-2 pr-4 text-muted-foreground">Old playlist</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">YouTube Playlist</a></td>
-            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-2 pr-4 text-muted-foreground">Lec 2 · Dr. Ayman Bahaa</td>
+          <tr class="border-border border-b">
+            <td class="text-muted-foreground py-2 pr-4">Old playlist</td>
             <td class="py-2">
-              <a href="#" class="text-primary hover:underline">Part 1</a>
+              <a
+                href="https://youtube.com/playlist?list=PLy_2fgXkPiZvK4_PJm56Tsmlx4A4Cee8s&si=f4o4VgmknLfUTp47"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">YouTube Playlist</a
+              >
+            </td>
+            <td class="text-muted-foreground py-2 pl-4 text-xs">—</td>
+          </tr>
+          <tr class="border-border border-b">
+            <td class="text-muted-foreground py-2 pr-4"
+              >Lec 2 · Dr. Ayman Bahaa</td
+            >
+            <td class="py-2">
+              <a
+                href="https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAX4QTRXEU4ZQFHIBZPKTEQUFYKI&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_213238-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_213238-Meeting+Recording.mp4%3Fweb%3D1&iCalUid=040000008200E00074C5B7101A82E00807EA0215B8DF255F64A3DC010000000000000000100000008453417611F5E74BA760980FD4CCA514&masterICalUid=040000008200e00074c5b7101a82e00800000000b8df255f64a3dc010000000000000000100000008453417611f5e74ba760980fd4cca514&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=786ffa67-c979-48cc-b802-66d42eb3bc36&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bb01bf51-fab3-40ff-9ec4-50595ecfc6a9&threadType=space&meetingType=Recurring&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771700439928&subType=RecapSharingLink_RecapCore"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Part 1</a
+              >
               <span class="text-muted-foreground mx-1">/</span>
-              <a href="#" class="text-primary hover:underline">Part 2</a>
+              <a
+                href="https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAWWKXSCYYJPOREYPNWIVYDFUWT2&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_224310-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2F%D9%85%D8%AD%D8%A7%D8%B6%D8%B1%D8%A7%D8%AA+%D8%B1%D9%85%D8%B6%D8%A7%D9%86-20260221_224310-Meeting+Recording.mp4%3Fweb%3D1&iCalUid=040000008200E00074C5B7101A82E00807EA0215B8DF255F64A3DC010000000000000000100000008453417611F5E74BA760980FD4CCA514&masterICalUid=040000008200e00074c5b7101a82e00800000000b8df255f64a3dc010000000000000000100000008453417611f5e74ba760980fd4cca514&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=786ffa67-c979-48cc-b802-66d42eb3bc36&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bb01bf51-fab3-40ff-9ec4-50595ecfc6a9&threadType=space&meetingType=Recurring&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771700439928&subType=RecapSharingLink_RecapCore"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Part 2</a
+              >
               <span class="text-muted-foreground ml-1 text-xs">(Teams)</span>
             </td>
-            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">20 Apr 2026</td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400"
+              >20 Apr 2026</td
+            >
           </tr>
-          <tr class="border-b border-border">
-            <td class="py-2 pr-4 text-muted-foreground">Lec 2 · Dr. Hossam</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">One Drive</a></td>
-            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+          <tr class="border-border border-b">
+            <td class="text-muted-foreground py-2 pr-4">Lec 2 · Dr. Hossam</td>
+            <td class="py-2">
+              <a
+                href="https://1drv.ms/v/c/eff459d89f41aeff/IQDiCO2mi-10QKjstks8o-xYAV9fSgZdfLz7VnE3N3F_Tdg?e=mFe1yz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">One Drive</a
+              >
+            </td>
+            <td class="text-muted-foreground py-2 pl-4 text-xs">—</td>
           </tr>
-          <tr class="border-b border-border">
-            <td class="py-2 pr-4 text-muted-foreground">Tut 1 · Eng. Alaa Hamdy</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">Teams</a></td>
-            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">21 Apr 2026</td>
+          <tr class="border-border border-b">
+            <td class="text-muted-foreground py-2 pr-4"
+              >Tut 1 · Eng. Alaa Hamdy</td
+            >
+            <td class="py-2">
+              <a
+                href="https://engasuedu.sharepoint.com/:v:/s/CSE362UG2023-DistributedComputing40591/IQCI-bCS4fS7TIwZaPyF0Ps1AXaBVhWy6UwTqwiKetRCHkw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Teams</a
+              >
+            </td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400"
+              >21 Apr 2026</td
+            >
           </tr>
           <tr>
-            <td class="py-2 pr-4 text-muted-foreground">Tut 1 · Eng. Andrew</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">Teams</a></td>
-            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">22 Apr 2026</td>
+            <td class="text-muted-foreground py-2 pr-4">Tut 1 · Eng. Andrew</td>
+            <td class="py-2">
+              <a
+                href="https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAVT2BRM7Z4E2BF2ISONW72XT3XY&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2FSection+1%2C+Eng+Andrew-20260223_135958-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2FSection+1%2C+Eng+Andrew-20260223_135958-Meeting+Recording.mp4%3Fweb%3D1&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=dafb272b-5afb-415e-85f4-02ce26e4f264&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bbbd6b38-df11-456d-bc58-b58b52853b8f&threadType=space&meetingType=MeetNow&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771847586600&subType=RecapSharingLink_RecapCore"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Teams</a
+              >
+            </td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400"
+              >22 Apr 2026</td
+            >
           </tr>
         </tbody>
       </table>
@@ -150,25 +274,47 @@ import PageLayout from '@/components/layouts/PageLayout.astro';
 
     {/* Deep Learning */}
     <div>
-      <h3 class="text-base font-medium mb-2">Deep Learning</h3>
-      <table class="w-full text-sm not-prose border-collapse">
+      <h3 class="mb-2 text-base font-medium">Deep Learning</h3>
+      <table class="not-prose w-full border-collapse text-sm">
         <thead>
-          <tr class="border-b border-border">
-            <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-40">Session</th>
-            <th class="py-2 text-left text-muted-foreground font-medium">Links</th>
-            <th class="py-2 pl-4 text-left text-muted-foreground font-medium w-36">Expires</th>
+          <tr class="border-border border-b">
+            <th
+              class="text-muted-foreground w-40 py-2 pr-4 text-left font-medium"
+              >Session</th
+            >
+            <th class="text-muted-foreground py-2 text-left font-medium"
+              >Links</th
+            >
+            <th
+              class="text-muted-foreground w-36 py-2 pl-4 text-left font-medium"
+              >Expires</th
+            >
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b border-border">
-            <td class="py-2 pr-4 text-muted-foreground">Lecture 2</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">Link</a></td>
-            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+          <tr class="border-border border-b">
+            <td class="text-muted-foreground py-2 pr-4">Lecture 2</td>
+            <td class="py-2">
+              <a
+                href="https://engasuedu-my.sharepoint.com/personal/e07759_eng_asu_edu_eg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe07759%5Feng%5Fasu%5Fedu%5Feg%2FDocuments%2FRecordings%2FLecture%20%5F2%20%28Deep%20Learning%29%2D20260217%5F182935%2DMeeting%20Recording%2Emp4&nav=eyJwbGF5YmFja09wdGlvbnMiOnsic3RhcnRUaW1lSW5TZWNvbmRzIjowLjgzNDk3Mn19&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ee7e2bf53%2D2e8d%2D440e%2D9573%2D106472c0955d"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Stream</a
+              >
+            </td>
+            <td class="text-muted-foreground py-2 pl-4 text-xs">—</td>
           </tr>
           <tr>
-            <td class="py-2 pr-4 text-muted-foreground">Lecture 3</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">Link</a></td>
-            <td class="py-2 pl-4 text-muted-foreground text-xs">—</td>
+            <td class="text-muted-foreground py-2 pr-4">Lecture 3</td>
+            <td class="py-2">
+              <a
+                href="https://engasuedu-my.sharepoint.com/personal/e07759_eng_asu_edu_eg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe07759%5Feng%5Fasu%5Fedu%5Feg%2FDocuments%2FRecordings%2FDeep%20Learning%20%28Wednesday%29%20during%20Ramadan%20630%20PM%2D20260225%5F184716%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3da08b56%2D0571%2D4ad8%2D8429%2D4e4b9cebf7f2"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Stream</a
+              >
+            </td>
+            <td class="text-muted-foreground py-2 pl-4 text-xs">—</td>
           </tr>
         </tbody>
       </table>
@@ -176,51 +322,104 @@ import PageLayout from '@/components/layouts/PageLayout.astro';
 
     {/* IoT */}
     <div>
-      <h3 class="text-base font-medium mb-2">Internet of Things</h3>
-      <table class="w-full text-sm not-prose border-collapse">
+      <h3 class="mb-2 text-base font-medium">Internet of Things</h3>
+      <table class="not-prose w-full border-collapse text-sm">
         <thead>
-          <tr class="border-b border-border">
-            <th class="py-2 pr-4 text-left text-muted-foreground font-medium w-40">Session</th>
-            <th class="py-2 text-left text-muted-foreground font-medium">Links</th>
-            <th class="py-2 pl-4 text-left text-muted-foreground font-medium w-36">Expires</th>
+          <tr class="border-border border-b">
+            <th
+              class="text-muted-foreground w-40 py-2 pr-4 text-left font-medium"
+              >Session</th
+            >
+            <th class="text-muted-foreground py-2 text-left font-medium"
+              >Links</th
+            >
+            <th
+              class="text-muted-foreground w-36 py-2 pl-4 text-left font-medium"
+              >Expires</th
+            >
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="py-2 pr-4 text-muted-foreground">Lecture 2</td>
-            <td class="py-2"><a href="#" class="text-primary hover:underline">Teams</a></td>
-            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400">18 Apr 2026</td>
+            <td class="text-muted-foreground py-2 pr-4">Lecture 2</td>
+            <td class="py-2">
+              <a
+                href="https://engasuedu.sharepoint.com/:v:/s/CSE365UG2023-InternetofThings40592/IQC5AXq3veB4S7m-PsBGwHvZASYIbGCi1b9gwSN_nu3CjL8?e=0CM2j4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:underline">Teams</a
+              >
+            </td>
+            <td class="py-2 pl-4 text-xs text-amber-500 dark:text-amber-400"
+              >18 Apr 2026</td
+            >
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <div class="bg-border h-px my-6"></div>
+  <div class="bg-border my-6 h-px"></div>
 
   {/* Credits */}
   <section class="space-y-2 pb-4">
-    <h2 class="text-lg font-semibold mt-0">Credits</h2>
-    <p class="text-sm text-muted-foreground m-0">Thanks to all contributors ❤️</p>
-    <p class="text-sm text-muted-foreground m-0 leading-relaxed">
-      Sharqawy Wael ·
-      <a href="mailto:tyoussef050@gmail.com" class="text-primary hover:underline">tyoussef050</a> ·
-      <a href="mailto:sara.swelam@gmail.com" class="text-primary hover:underline">sara.swelam</a> ·
-      <a href="mailto:himoabdelfattah@gmail.com" class="text-primary hover:underline">himoabdelfattah</a> ·
-      <a href="mailto:amgaa67056321@gmail.com" class="text-primary hover:underline">amgaa67056321</a> ·
-      <a href="mailto:pavlyghalysedhom@gmail.com" class="text-primary hover:underline">pavlyghalysedhom</a> ·
-      <a href="mailto:omara862005@gmail.com" class="text-primary hover:underline">omara862005</a> ·
-      <a href="mailto:renadibrahim@gmail.com" class="text-primary hover:underline">renadibrahim</a> ·
-      <a href="mailto:abdelmoneimmahmoud2005@gmail.com" class="text-primary hover:underline">abdelmoneimmahmoud2005</a> ·
-      <a href="mailto:nadaserour767@gmail.com" class="text-primary hover:underline">nadaserour767</a> ·
-      <a href="mailto:ezzeldinismail112@gmail.com" class="text-primary hover:underline">ezzeldinismail112</a> ·
-      Esraa Mostafa notes · Marwan Ahmed ·
-      <a href="mailto:mobeder88@gmail.com" class="text-primary hover:underline">mobeder88</a>
+    <h2 class="mt-0 text-lg font-semibold">Credits</h2>
+    <p class="text-muted-foreground m-0 text-sm">
+      Thanks to all contributors ❤️
     </p>
-    <p class="text-sm text-muted-foreground m-0">
-      Want to contribute? <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline">Contact me.</a>
+    <p class="text-muted-foreground m-0 text-sm leading-relaxed">
+      <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline">
+        Sharqawy Wael
+      </a> · ·
+      <a
+        href="mailto:tyoussef050@gmail.com"
+        class="text-primary hover:underline">Youssef Tarek</a
+      > ·
+      <a
+        href="mailto:sara.swelam@gmail.com"
+        class="text-primary hover:underline">Sara Swelam</a
+      > ·
+      <a
+        href="mailto:himoabdelfattah@gmail.com"
+        class="text-primary hover:underline">Bima</a
+      > ·
+      <a
+        href="mailto:amgaa67056321@gmail.com"
+        class="text-primary hover:underline">Ahmed Mostafa</a
+      > ·
+      <a
+        href="mailto:pavlyghalysedhom@gmail.com"
+        class="text-primary hover:underline">Pavly Ghaly</a
+      > ·
+      <a
+        href="mailto:omara862005@gmail.com"
+        class="text-primary hover:underline">Omar Aboria</a
+      > ·
+      <a
+        href="mailto:renadibrahim@gmail.com"
+        class="text-primary hover:underline">Renad Ibrahim</a
+      > ·
+      <a
+        href="mailto:abdelmoneimmahmoud2005@gmail.com"
+        class="text-primary hover:underline">Abdelrhman Mahmoud</a
+      > ·
+      <a
+        href="mailto:nadaserour767@gmail.com"
+        class="text-primary hover:underline">Nader Serour</a
+      > ·
+      <a
+        href="mailto:ezzeldinismail112@gmail.com"
+        class="text-primary hover:underline">Ezz el dien Ismaeil</a
+      > · Esraa Mostafa · Marwan Ahmed ·
+      <a href="mailto:mobeder88@gmail.com" class="text-primary hover:underline"
+        >Mohamed Beder</a
+      >
+    </p>
+    <p class="text-muted-foreground m-0 text-sm">
+      Want to contribute? <a
+        href="mailto:sherqo@sherqo.me"
+        class="text-primary hover:underline">Contact me.</a
+      >
     </p>
   </section>
-
 </PageLayout>
-
