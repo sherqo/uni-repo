@@ -7,6 +7,15 @@ Voluntary student collaboration hub for CAIE 23P juniors at Ain Shams University
 - [Astro](https://astro.build) + [Tailwind CSS v4](https://tailwindcss.com)
 - Package manager: [Bun](https://bun.sh)
 
+## Contributing
+
+All content lives in `src/data/` as plain JSON files — no code needed. Edit the right file and open a PR:
+
+- `resources.json` — links & drive folders
+- `quizzes.json` — quiz dates
+- `recordings.json` — lecture/tutorial recordings
+- `credits.json` — contributors
+
 ## Dev
 
 ```sh
