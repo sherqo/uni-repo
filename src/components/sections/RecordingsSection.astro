@@ -26,49 +26,64 @@ const { courses } = Astro.props;
 <section class="space-y-4">
   <h2 class="mt-0 text-2xl font-semibold">Recordings – Spring 2026</h2>
   <p class="text-muted-foreground m-0 text-sm">
-    MS Teams recordings expire in 60 days — save them before they're gone.
-    Want to contribute? <a href="mailto:sherqo@sherqo.me" class="text-primary hover:underline"
-      >Contact me.</a
+    MS Teams recordings expire in 60 days — save them before they're gone. Want
+    to contribute? <a
+      href="mailto:sherqo@sherqo.me"
+      class="text-primary hover:underline">Contact me.</a
     >
   </p>
 
   {
-    courses.map((c) => (
+    courses.map(c => (
       <div>
         <h3 class="mb-2 text-xl font-semibold">{c.course}</h3>
         <table class="not-prose w-full border-collapse text-sm">
           <thead>
             <tr class="border-border border-b">
-              <th class="text-muted-foreground w-40 py-2 pr-4 text-left font-medium">Session</th>
-              <th class="text-muted-foreground py-2 text-left font-medium">Links</th>
-              <th class="text-muted-foreground w-36 py-2 pl-4 text-left font-medium">Expires</th>
+              <th class="text-muted-foreground w-40 py-2 pr-4 text-left font-medium">
+                Session
+              </th>
+              <th class="text-muted-foreground py-2 text-left font-medium">
+                Links
+              </th>
+              <th class="text-muted-foreground w-36 py-2 pl-4 text-left font-medium">
+                Expires
+              </th>
             </tr>
           </thead>
           <tbody>
             {c.sessions.map((s, i) => (
-              <tr class={i < c.sessions.length - 1 ? 'border-border border-b' : ''}>
+              <tr
+                class={
+                  i < c.sessions.length - 1 ? 'border-border border-b' : ''
+                }>
                 <td class="text-foreground py-2 pr-4">{s.label}</td>
                 <td class="py-2">
                   {s.links.map((link, j) => (
                     <>
-                      {j > 0 && <span class="text-muted-foreground mx-1">/</span>}
+                      {j > 0 && (
+                        <span class="text-muted-foreground mx-1">/</span>
+                      )}
                       <a
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-primary hover:underline"
-                      >
+                        class="text-primary hover:underline">
                         {link.text}
                       </a>
                     </>
                   ))}
                   {s.badge && (
-                    <span class="text-muted-foreground ml-1 text-xs">({s.badge})</span>
+                    <span class="text-muted-foreground ml-1 text-xs">
+                      ({s.badge})
+                    </span>
                   )}
                 </td>
                 <td class="py-2 pl-4 text-xs">
                   {s.expires ? (
-                    <span class="text-amber-500 dark:text-amber-400">{s.expires}</span>
+                    <span class="text-warning font-mono text-xs">
+                      {s.expires}
+                    </span>
                   ) : (
                     <span class="text-muted-foreground">—</span>
                   )}

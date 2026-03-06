@@ -19,6 +19,7 @@ html {
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-warning: var(--warning);
 
   --font-sans:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -35,6 +36,7 @@ html {
   --muted: #f0f0ff;
   --muted-foreground: #6b6b80;
   --border: #d1d1d8;
+  --warning: #f59e0b;
 }
 
 .dark {
@@ -45,6 +47,7 @@ html {
   --muted: #1e1e2e;
   --muted-foreground: #8b8ba0;
   --border: #44475a;
+  --warning: #fbbf24;
 }
 
 @layer base {

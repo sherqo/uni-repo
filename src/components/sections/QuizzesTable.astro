@@ -16,8 +16,11 @@ const { quizzes } = Astro.props;
   <table class="not-prose w-full border-collapse text-sm">
     <thead>
       <tr class="border-border border-b">
-        <th class="text-muted-foreground w-32 py-2 pr-4 text-left font-medium">Date</th>
-        <th class="text-muted-foreground py-2 text-left font-medium">Details</th>
+        <th class="text-muted-foreground w-32 py-2 pr-4 text-left font-medium"
+          >Date</th
+        >
+        <th class="text-muted-foreground py-2 text-left font-medium">Details</th
+        >
       </tr>
     </thead>
     <tbody>
@@ -27,8 +30,7 @@ const { quizzes } = Astro.props;
           return (
             <tr class={i < quizzes.length - 1 ? 'border-border border-b' : ''}>
               <td
-                class={`py-2 pr-4 font-mono text-xs ${isTba ? 'text-muted-foreground' : 'text-foreground'}`}
-              >
+                class={`py-2 pr-4 font-mono text-xs ${isTba ? 'text-muted-foreground' : 'text-foreground'}`}>
                 {quiz.date}
               </td>
               <td class={`py-2 ${isTba ? 'text-muted-foreground' : ''}`}>
