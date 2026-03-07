@@ -1,7 +1,18 @@
 [
   {
-    "date": "07 Mar",
-    "details": "Agile quiz in the Lecture — till week 4 content"
+    "date": "Week 5",
+    "details": "Economy formative quiz — in the lecture"
   },
-  { "date": "TBA", "details": null }
+  {
+    "date": "Week 6",
+    "details": "Machine Learning Quiz 1 — in tutorial time"
+  },
+  {
+    "date": "Week 7 (after Eid el Fitr)",
+    "details": "Control quiz"
+  },
+  {
+    "date": "Midterm week",
+    "details": "Economy submissive quiz — with the midterm paper"
+  }
 ]
