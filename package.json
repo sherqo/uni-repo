@@ -17,10 +17,15 @@
     "dev": "astro dev --host",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "astro preview --host",
-    "type-check": "astro check"
+    "preview": "bun run build && wrangler dev",
+    "type-check": "astro check",
+    "deploy": "bun run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.13",
+    "wrangler": "^4.71.0"
+  },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
     "@astrojs/sitemap": "^3.7.0",
