@@ -8,10 +8,10 @@ interface Props {
   contributors: Contributor[];
 }
 
-const { contributors } = Astro.props;
+const { contributors, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-2 pb-4">
+<section class="space-y-2 pb-4" {...otherProps}>
   <h2 class="mt-0 text-2xl font-semibold">Credits</h2>
   <p class="text-muted-foreground m-0 text-sm">Thanks to all contributors ❤️</p>
   <p class="text-muted-foreground m-0 text-sm leading-relaxed">

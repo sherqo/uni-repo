@@ -13,10 +13,10 @@ interface Props {
   resources: Resource[];
 }
 
-const { resources } = Astro.props;
+const { resources, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-4">
+<section class="space-y-4" {...otherProps}>
   <h2 class="mt-0 text-2xl font-semibold">Links &amp; Resources</h2>
   <table class="not-prose w-full border-collapse text-sm">
     <tbody>

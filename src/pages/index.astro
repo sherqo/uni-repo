@@ -24,14 +24,14 @@ import contributors from '@/data/credits.json';
   </header>
 
   <div class="bg-border my-6 h-px"></div>
-  <ResourcesTable resources={resources} />
+  <ResourcesTable id="resources" resources={resources} />
 
   <div class="bg-border my-6 h-px"></div>
-  <QuizzesTable quizzes={quizzes} />
+  <QuizzesTable id="quizzes" quizzes={quizzes} linkText="Need exam dates? See the Exams page." linkHref="/exams" />
 
   <div class="bg-border my-6 h-px"></div>
-  <RecordingsSection courses={recordings} />
+  <RecordingsSection id="recordings" courses={recordings} />
 
   <div class="bg-border my-6 h-px"></div>
-  <Credits contributors={contributors} />
+  <Credits id="credits" contributors={contributors} />
 </PageLayout>

@@ -6,13 +6,25 @@ interface Quiz {
 
 interface Props {
   quizzes: Quiz[];
+  title?: string;
+  linkText?: string;
+  linkHref?: string;
 }
 
-const { quizzes } = Astro.props;
+const { quizzes, title = 'Quizzes & Assessments', linkText, linkHref, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-4">
-  <h2 class="mt-0 text-2xl font-semibold">Quizzes &amp; Assessments</h2>
+<section class="space-y-4" {...otherProps}>
+  <h2 class="mt-0 text-2xl font-semibold">{title}</h2>
+  {
+    linkText && linkHref && (
+      <p class="text-sm">
+        <a href={linkHref} class="underline">
+          {linkText}
+        </a>
+      </p>
+    )
+  }
   <table class="not-prose w-full border-collapse text-sm">
     <thead>
       <tr class="border-border border-b">

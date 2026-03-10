@@ -9,11 +9,15 @@
     ]
   },
   {
-    "label": "Drive",
+    "label": "Drives",
     "links": [
       {
         "href": "https://drive.google.com/drive/folders/1dAD5NoibYQrV5GFoRau0DLgF2W2BDvUQ?usp=drive_link",
         "text": "Semester 6 – Spring 2026"
+      },
+      {
+        "href": "https://garraio-my.sharepoint.com/:f:/p/ahmed_hisham/IgDjWUeULGsdQZDMVnW5T4B5AQqfU1Xc6_IjEt3LbdU0AHs?e=ryNN1J",
+        "text": "Adv Embedded Sys"
       }
     ]
   },

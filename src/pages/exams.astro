@@ -1,0 +1,14 @@
+---
+import PageLayout from '../components/layouts/PageLayout.astro';
+import QuizzesTable from '../components/sections/QuizzesTable.astro';
+import exams from '../data/exams.json';
+---
+
+<PageLayout>
+  <QuizzesTable
+    quizzes={exams}
+    title="Midterm Exams"
+    linkText="Looking for quizzes and assessments? See the main page."
+    linkHref="/#quizzes"
+  />
+</PageLayout>
