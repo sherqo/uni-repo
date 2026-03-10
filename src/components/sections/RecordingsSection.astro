@@ -57,11 +57,15 @@ const { courses, ...otherProps } = Astro.props;
                   ))}
                   {s.badge && <span class="text-muted-foreground ml-1 text-xs">({s.badge})</span>}
                 </td>
-                <td class="py-2 pl-4 text-xs">
-                  {s.expires ? (
-                    <span class="text-warning font-mono text-xs">{s.expires}</span>
+                <td class="py-2 pl-4 font-mono text-xs">
+                  {s.expires === 'never' ? (
+                    <span class="text-muted-foreground">never</span>
+                  ) : s.expires === null ? (
+                    <a href="/about" class="italic hover:underline">
+                      needs collab
+                    </a>
                   ) : (
-                    <span class="text-muted-foreground">—</span>
+                    <span class="text-warning">{s.expires}</span>
                   )}
                 </td>
               </tr>

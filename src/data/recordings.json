@@ -11,7 +11,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Lectures Playlist",
@@ -22,7 +22,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Tutorials Playlist",
@@ -33,7 +33,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Lec 2 · Dr. Hossam",
@@ -44,7 +44,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Tut 1 · Eng. Andrew",
@@ -72,7 +72,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       }
     ]
   },
@@ -199,7 +199,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Labs playlist",
@@ -210,7 +210,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       }
     ]
   }
