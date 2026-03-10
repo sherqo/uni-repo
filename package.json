@@ -27,10 +27,10 @@
     "wrangler": "^4.71.0"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/check": "^0.9.7",
+    "@astrojs/sitemap": "^3.7.1",
     "@tailwindcss/vite": "^4.2.1",
-    "astro": "^5.18.0",
+    "astro": "^6.0.2",
     "clsx": "^2.1.1",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",

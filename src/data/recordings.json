@@ -45,21 +45,9 @@
         ],
         "badge": null,
         "expires": "never"
-      },
-      {
-        "label": "Tut 1 · Eng. Andrew",
-        "links": [
-          {
-            "href": "https://teams.cloud.microsoft/l/meetingrecap?driveId=b%21dowuYHpesE6eG9tzQuFi_vOE5cPws7JMg55roq7ZrBu4dPEUz9E2Qq3PLVg87P9J&driveItemId=01MLLKTAVT2BRM7Z4E2BF2ISONW72XT3XY&sitePath=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2FSection+1%2C+Eng+Andrew-20260223_135958-Meeting+Recording.mp4%3Fweb%3D1&fileUrl=https%3A%2F%2Fengasuedu.sharepoint.com%2Fsites%2FCSE362UG2023-DistributedComputing40591%2FShared+Documents%2FGeneral%2FRecordings%2FSection+1%2C+Eng+Andrew-20260223_135958-Meeting+Recording.mp4%3Fweb%3D1&threadId=19%3AlpW-jaAgGTbRZEzWr0iO4OCmwcZrxoXkr3yAp_PCST01%40thread.tacv2&organizerId=dafb272b-5afb-415e-85f4-02ce26e4f264&tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&callId=bbbd6b38-df11-456d-bc58-b58b52853b8f&threadType=space&meetingType=MeetNow&organizerGroupId=9c8714ed-0dc6-4db4-9316-3c6f29b5f94e&channelType=Standard&replyChainId=1771847586600&subType=RecapSharingLink_RecapCore",
-            "text": "Teams"
-          }
-        ],
-        "badge": null,
-        "expires": "22 Apr 2026"
       }
     ]
   },
-
   {
     "course": "Introduction to Machine Learning",
     "sessions": [
@@ -76,7 +64,6 @@
       }
     ]
   },
-
   {
     "course": "Deep Learning",
     "sessions": [
@@ -119,74 +106,18 @@
     "course": "NLP",
     "sessions": [
       {
-        "label": "Lecture 2 Tue",
+        "label": "Lectures Playlist",
         "links": [
           {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQAtS-_qg0k4TqYdWIKknVJcAdFt3AHYXAzepYnNLRhICJ8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=89n6n4",
-            "text": "Stream"
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EETiHsOTDfa-sLTmFxn3g5A",
+            "text": "YouTube Playlist"
           }
         ],
         "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 2 Wed",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQDhi7wqIMPDSL_xVmA-b8i5ASfW0IEAl3QIcwh12DlVpPM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=IHhtTh",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 3 Tue",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQBiqqSwZS4fRpOf_6XAnagnAU5n7w7UQ8pMXGSv1RYeXUU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=CJlZ7b",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 3 Wed",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQDEV4nMn6vAR7NDfJP062kzAVw1YrZ3cSy_8e7m08_uhK0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0WxqE3",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 4 Tue",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQBtC695xMWqS4US5-ed26IQAd5un5N9EWckEG8jFDbIS3o?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=K6Fc87",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 4 Wed",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQCSax_5t0-7TJ_t1V_qcW7jAXcXd3zrlWbBqZUhQnyUIvc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=uxE72o",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
+        "expires": "never"
       }
     ]
   },
-
   {
     "course": "Internet of Things",
     "sessions": [
