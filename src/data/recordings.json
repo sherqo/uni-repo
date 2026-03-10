@@ -78,39 +78,18 @@
   {
     "course": "Deep Learning",
     "sessions": [
-      {
-        "label": "Lecture 2",
+       {
+        "label": "Lectures Playlist",
         "links": [
           {
-            "href": "https://engasuedu-my.sharepoint.com/personal/e07759_eng_asu_edu_eg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe07759%5Feng%5Fasu%5Fedu%5Feg%2FDocuments%2FRecordings%2FLecture%20%5F2%20%28Deep%20Learning%29%2D20260217%5F182935%2DMeeting%20Recording%2Emp4&nav=eyJwbGF5YmFja09wdGlvbnMiOnsic3RhcnRUaW1lSW5TZWNvbmRzIjowLjgzNDk3Mn19&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ee7e2bf53%2D2e8d%2D440e%2D9573%2D106472c0955d",
-            "text": "Stream"
+            "href": "https://www.youtube.com/playlist?list=PL3yOp9QmY7EGuftvS5R9r29Y5ld4aBf5A",
+            "text": "YouTube Playlist"
           }
         ],
         "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 3",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/personal/e07759_eng_asu_edu_eg/_layouts/15/stream.aspx?id=%2Fpersonal%2Fe07759%5Feng%5Fasu%5Fedu%5Feg%2FDocuments%2FRecordings%2FDeep%20Learning%20%28Wednesday%29%20during%20Ramadan%20630%20PM%2D20260225%5F184716%2DMeeting%20Recording%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E3da08b56%2D0571%2D4ad8%2D8429%2D4e4b9cebf7f2",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
-      },
-      {
-        "label": "Lecture 4",
-        "links": [
-          {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQBJq0bcZwN6SpsXh9WqHFvQAc2JNvuhmf586oQhD15S4rA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SeYCcM",
-            "text": "Stream"
-          }
-        ],
-        "badge": null,
-        "expires": null
+        "expires": "never"
       }
+      
     ]
   },
   {
