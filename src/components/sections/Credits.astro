@@ -2,6 +2,8 @@
 interface Contributor {
   name: string;
   link: string | null;
+  avatar?: string; // optional when using static list
+  static?: boolean; // true for entries coming from credits.json
 }
 
 interface Props {
@@ -14,22 +16,50 @@ const { contributors, ...otherProps } = Astro.props;
 <section class="space-y-2 pb-4" {...otherProps}>
   <h2 class="mt-0 text-2xl font-semibold">Credits</h2>
   <p class="text-muted-foreground m-0 text-sm">Thanks to all contributors ❤️</p>
-  <p class="text-muted-foreground m-0 text-sm leading-relaxed">
-    {
-      contributors.map((c, i) => (
+
+  {
+    (() => {
+      // compute live and static lists; static contributors are currently
+      // hidden, but you can reinstate them by rendering `old` below
+      const live = contributors.filter(c => !c.static);
+      const old = contributors.filter(c => c.static);
+      return (
         <>
-          {i > 0 && <span class="mx-1">·</span>}
-          {c.link ? (
-            <a href={c.link} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
-              {c.name}
-            </a>
-          ) : (
-            <span>{c.name}</span>
+          <p class="text-muted-foreground text-sm">
+            {live.map((c, i) => (
+              <>
+                {i > 0 && <span class="mx-1"> </span>}
+                {c.link ? (
+                  <a href={c.link} target="_blank" rel="noopener noreferrer" class="text-primary inline-flex items-center hover:underline">
+                    {c.avatar && <img src={c.avatar} alt={c.name} class="mr-1 h-5 w-5 rounded-full" />}
+                    {c.name}
+                  </a>
+                ) : (
+                  <span class="inline-flex items-center">
+                    {c.avatar && <img src={c.avatar} alt={c.name} class="mr-1 h-5 w-5 rounded-full" />}
+                    {c.name}
+                  </span>
+                )}
+              </>
+            ))}
+          </p>
+          {/*
+          {old.length > 0 && (
+            <p class="text-muted-foreground text-xs mt-1">
+              {old.map((c, i) => (
+                <>
+                  {i > 0 && <span class="mx-1"> </span>}
+                  ...
+                </>
+              ))}
+            </p>
           )}
+          */}
         </>
-      ))
-    }
-  </p>
+      );
+    })()
+  }
+
   <p class="text-muted-foreground m-0 text-sm">
     Want to contribute? <a href="/about#contribute" class="text-primary hover:underline">See how.</a>
   </p>

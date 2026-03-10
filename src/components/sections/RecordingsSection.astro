@@ -60,7 +60,7 @@ const { courses, ...otherProps } = Astro.props;
                 <td class="py-2 pl-4 font-mono text-xs">
                   {s.expires === 'never' ? (
                     <span class="text-muted-foreground">never</span>
-                  ) : s.expires === null ? (
+                  ) : s.expires === null || s.expires === undefined ? (
                     <a href="/about" class="italic hover:underline">
                       needs collab
                     </a>

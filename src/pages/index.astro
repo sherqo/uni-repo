@@ -8,7 +8,8 @@ import Credits from '@/components/sections/Credits.astro';
 import resources from '@/data/resources.json';
 import quizzes from '@/data/quizzes.json';
 import recordings from '@/data/recordings.json';
-import contributors from '@/data/credits.json';
+import staticContributors from '@/data/credits.json';
+import { getContributors } from '@/lib/getContributors';
 ---
 
 <PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
@@ -33,5 +34,17 @@ import contributors from '@/data/credits.json';
   <RecordingsSection id="recordings" courses={recordings} />
 
   <div class="bg-border my-6 h-px"></div>
-  <Credits id="credits" contributors={contributors} />
+  {
+    // load live contributors and merge with static list (avoid duplicates)
+  }
+  <Credits
+    id="credits"
+    contributors={await getContributors().then(dynamic => {
+      // show live contributors first, then all static ones afterwards
+      const list: any[] = [];
+      dynamic.forEach(d => list.push(d));
+      staticContributors.forEach(s => list.push({ ...s, static: true }));
+      return list.length ? list : staticContributors;
+    })}
+  />
 </PageLayout>
