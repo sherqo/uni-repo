@@ -32,6 +32,7 @@ export async function getContributors(): Promise<Contributor[]> {
     // To show real names we fetch each user's profile.
     const contributors: Contributor[] = [];
     for (const c of data) {
+      if (c.type === 'Bot') continue;
       let name = c.login;
       try {
         const userResp = await fetch(c.url, { headers });
