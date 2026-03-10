@@ -48,7 +48,6 @@
       }
     ]
   },
-
   {
     "course": "Introduction to Machine Learning",
     "sessions": [
@@ -65,7 +64,6 @@
       }
     ]
   },
-
   {
     "course": "Deep Learning",
     "sessions": [
@@ -78,7 +76,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Lecture 3",
@@ -89,7 +87,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Lecture 4",
@@ -100,7 +98,7 @@
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       }
     ]
   },
@@ -118,44 +116,41 @@
         "badge": null,
         "expires": "never"
       },
-      
       {
         "label": "Lecture 2 Wed",
         "links": [
           {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQDhi7wqIMPDSL_xVmA-b8i5ASfW0IEAl3QIcwh12DlVpPM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=IHhtTh",
+            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQDhi7wqIMPDSL_xVmA-b8i5ASfW0IEAl3QIcwh12DlVpPM?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=IHhtTh",
             "text": "Stream"
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
-      
       {
         "label": "Lecture 3 Wed",
         "links": [
           {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQDEV4nMn6vAR7NDfJP062kzAVw1YrZ3cSy_8e7m08_uhK0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0WxqE3",
+            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQDEV4nMn6vAR7NDfJP062kzAVw1YrZ3cSy_8e7m08_uhK0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0WxqE3",
             "text": "Stream"
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       },
       {
         "label": "Lecture 4 Wed",
         "links": [
           {
-            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQCSax_5t0-7TJ_t1V_qcW7jAXcXd3zrlWbBqZUhQnyUIvc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=uxE72o",
+            "href": "https://engasuedu-my.sharepoint.com/:v:/g/personal/e07759_eng_asu_edu_eg/IQCSax_5t0-7TJ_t1V_qcW7jAXcXd3zrlWbBqZUhQnyUIvc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=uxE72o",
             "text": "Stream"
           }
         ],
         "badge": null,
-        "expires": null
+        "expires": "never"
       }
     ]
   },
-
   {
     "course": "Internet of Things",
     "sessions": [
