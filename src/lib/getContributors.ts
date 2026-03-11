@@ -31,9 +31,12 @@ export async function getContributors(): Promise<Contributor[]> {
     // GitHub contributors endpoint only returns `login`.
     // To show real names we fetch each user's profile.
     const contributors: Contributor[] = [];
+    // Track both display names and logins to avoid false duplicates when the
+    // same person appears under different identifiers across API calls.
+    const seenNames = new Set<string>();
     for (const c of data) {
       if (c.type === 'Bot') continue;
-      let name = c.login;
+      let name = c.login; // always falls back to username if no profile name is set
       try {
         const userResp = await fetch(c.url, { headers });
         if (userResp.ok) {
@@ -41,6 +44,8 @@ export async function getContributors(): Promise<Contributor[]> {
           if (userInfo.name) name = userInfo.name;
         }
       } catch {} // ignore individual failures
+      seenNames.add(c.login.toLowerCase());
+      seenNames.add(name.toLowerCase());
       contributors.push({
         name,
         link: c.html_url,
@@ -51,11 +56,7 @@ export async function getContributors(): Promise<Contributor[]> {
     // Also scan commits to capture contributors whose commits are not linked to
     // a GitHub account (e.g. because the commit email is unverified/unlinked).
     // For those commits the `author` field returned by the API is null.
-    // Deduplication is name-based (case-insensitive); the same person committing
-    // under slightly different names may appear more than once, but that is
-    // preferable to missing a contributor entirely.
     try {
-      const seenNames = new Set(contributors.map(c => c.name.toLowerCase()));
       let page = 1;
       // Cap at 10 pages (up to 1 000 commits) to keep build time reasonable.
       while (page <= 10) {
@@ -68,13 +69,17 @@ export async function getContributors(): Promise<Contributor[]> {
           // `author` is null when the commit email is not linked to any GitHub account
           if (commit.author) continue;
           const gitAuthor = commit.commit?.author;
-          if (!gitAuthor?.name) continue;
-          const nameLower = gitAuthor.name.toLowerCase();
+          // Use git name when set; fall back to the email prefix so contributors
+          // with no git user.name configured are still shown.
+          const emailPrefix = gitAuthor?.email?.includes('@') ? gitAuthor.email.split('@')[0] : undefined;
+          const name = gitAuthor?.name || emailPrefix;
+          if (!name) continue;
+          const nameLower = name.toLowerCase();
           if (seenNames.has(nameLower)) continue;
           seenNames.add(nameLower);
           contributors.push({
-            name: gitAuthor.name,
-            link: gitAuthor.email ? `mailto:${gitAuthor.email}` : null,
+            name,
+            link: gitAuthor?.email ? `mailto:${gitAuthor.email}` : null,
           });
         }
 
