@@ -22,20 +22,39 @@ export async function getContributors(): Promise<Contributor[]> {
       headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     }
 
-    const res = await fetch(url, { headers });
+    // `anon=1` includes contributors whose emails are not linked to any GitHub
+    // account directly in the /contributors response (type === 'Anonymous').
+    const res = await fetch(url + '?anon=1', { headers });
     if (!res.ok) {
       console.warn('failed to fetch contributors', res.status, await res.text());
       return [];
     }
     const data = await res.json();
-    // GitHub contributors endpoint only returns `login`.
-    // To show real names we fetch each user's profile.
+    // GitHub contributors endpoint only returns `login` for linked accounts and
+    // `name`/`email` for anonymous entries.  Fetch each linked user's profile to
+    // resolve their display name.
     const contributors: Contributor[] = [];
     // Track both display names and logins to avoid false duplicates when the
     // same person appears under different identifiers across API calls.
     const seenNames = new Set<string>();
     for (const c of data) {
-      if (c.type === 'Bot') continue;
+      if (c.type === 'Anonymous') {
+        // Anonymous entries have no GitHub profile; use name/email from git metadata.
+        const emailPrefix = c.email?.includes('@') ? c.email.split('@')[0] : undefined;
+        const name = c.name || emailPrefix;
+        if (!name) {
+          console.warn('skipping anonymous contributor with no name or email', c);
+          continue;
+        }
+        const nameLower = name.toLowerCase();
+        if (seenNames.has(nameLower)) continue;
+        seenNames.add(nameLower);
+        contributors.push({
+          name,
+          link: c.email ? `mailto:${c.email}` : null,
+        });
+        continue;
+      }
       let name = c.login; // always falls back to username if no profile name is set
       try {
         const userResp = await fetch(c.url, { headers });
