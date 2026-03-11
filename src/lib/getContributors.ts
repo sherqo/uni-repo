@@ -22,7 +22,7 @@ export async function getContributors(): Promise<Contributor[]> {
       headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     }
 
-    const res = await fetch(url, { headers });
+    const res = await fetch(url + '?anon=1', { headers });
     if (!res.ok) {
       console.warn('failed to fetch contributors', res.status, await res.text());
       return [];
