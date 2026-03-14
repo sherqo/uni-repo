@@ -10,10 +10,10 @@ import quizzes from '@/data/quizzes.json';
 import recordings from '@/data/recordings.json';
 import staticContributors from '@/data/credits.json';
 import { getContributors } from '@/lib/getContributors';
-import { getCurrentWeek, getFormattedDate } from '@/lib/getWeekInfo';
+import { getCurrentWeek, getLastCommitDate } from '@/lib/getWeekInfo';
 
 const currentWeek = getCurrentWeek();
-const lastUpdated = getFormattedDate();
+const lastUpdated = getLastCommitDate();
 ---
 
 <PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
