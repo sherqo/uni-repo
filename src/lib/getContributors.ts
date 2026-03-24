@@ -11,6 +11,14 @@ export interface Contributor {
  * Requires GITHUB_TOKEN (optional for public repos, recommended to avoid rate
  * limits). Add it to your environment or Astro `env` file.
  */
+function getGithubToken(): string {
+  const fromProcess = typeof process !== 'undefined' ? process.env?.GITHUB_TOKEN : undefined;
+  const fromImportMeta = typeof import.meta !== 'undefined' ? (import.meta as any).env?.GITHUB_TOKEN : undefined;
+  const fromGlobal = typeof globalThis !== 'undefined' ? (globalThis as any).GITHUB_TOKEN : undefined;
+  const token = fromProcess || fromImportMeta || fromGlobal || '';
+  return token;
+}
+
 export async function getContributors(): Promise<Contributor[]> {
   try {
     const repo = 'sherqo/uni-repo';
@@ -18,8 +26,9 @@ export async function getContributors(): Promise<Contributor[]> {
     const headers: Record<string, string> = {
       Accept: 'application/vnd.github.v3+json',
     };
-    if (process.env.GITHUB_TOKEN) {
-      headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    const token = getGithubToken();
+    if (token) {
+      headers['Authorization'] = `token ${token}`;
     }
 
     const res = await fetch(url + '?anon=1', { headers });

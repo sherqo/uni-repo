@@ -1,10 +1,14 @@
 [
   {
-    "label": "Schedule",
+    "label": "Schedules",
     "links": [
       {
         "href": "https://docs.google.com/spreadsheets/d/1L4mpYWvXt4fn9t_Uh_tukfwPmcTajAEOe9xEhJC9bRs/edit?gid=1307724554#gid=1307724554",
-        "text": "CESS/CAIE Schedule – Spring 2026"
+        "text": "Schedule – Spring 2026"
+      },
+      {
+        "href": "https://eng.asu.edu.eg/download?sid=s7CE%2F06ZtQVtMfj2SQuzr%2FMr5h0eErcQ17X2LA6fuJo%3D",
+        "text": "Academic Calendar"
       }
     ]
   },
@@ -39,7 +43,7 @@
     "links": [
       {
         "href": "https://chat.whatsapp.com/CrmyFB3XmQ1IbWmdUVYwWI",
-        "text": "CAIE Junior Announcements"
+        "text": "CAIE Junior"
       }
     ]
   },

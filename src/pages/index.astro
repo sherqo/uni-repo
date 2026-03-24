@@ -10,10 +10,9 @@ import quizzes from '@/data/quizzes.json';
 import recordings from '@/data/recordings.json';
 import staticContributors from '@/data/credits.json';
 import { getContributors } from '@/lib/getContributors';
-import { getCurrentWeek, getLastCommitDate } from '@/lib/getWeekInfo';
+import { getLastCommitInfo } from '@/lib/getWeekInfo';
 
-const currentWeek = getCurrentWeek();
-const lastUpdated = getLastCommitDate();
+const lastCommitInfo = await getLastCommitInfo();
 ---
 
 <PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
@@ -23,9 +22,38 @@ const lastUpdated = getLastCommitDate();
       Voluntary student collaboration. May contain mistakes. We're trying to keep things updated as possible.
     </p>
     <p class="text-muted-foreground m-0 mt-1 text-sm">
-      Last updated: <strong class="text-foreground">{lastUpdated}</strong> · We are in
-      <strong class="text-foreground">Week {currentWeek}</strong>
+      Last updated: <strong class="text-foreground">{lastCommitInfo.date}</strong> by
+      {
+        lastCommitInfo.profile ? (
+          <a href={lastCommitInfo.profile} target="_blank" rel="noopener noreferrer" class="text-primary no-underline hover:underline">
+            <span>{lastCommitInfo.author}</span>
+          </a>
+        ) : (
+          <span class="inline-flex items-center gap-1">
+            {lastCommitInfo.avatar ? (
+              <img
+                src={lastCommitInfo.avatar}
+                alt={`${lastCommitInfo.author} avatar`}
+                class="h-[1em] w-[1em] rounded-full align-middle"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : null}
+            <span class="align-middle">{lastCommitInfo.author}</span>
+          </span>
+        )
+      }
+      · We are in
+      <strong class="text-foreground">Week <span id="current-week">?</span></strong>
     </p>
+    <script is:inline>
+      const start = new Date('2026-02-07T00:00:00.000Z');
+      const now = new Date();
+      const diffMs = now.getTime() - start.getTime();
+      const week = diffMs < 0 ? 1 : Math.floor(diffMs / (7 * 24 * 60 * 60 * 1000)) + 1;
+      const el = document.getElementById('current-week');
+      if (el) el.textContent = String(week);
+    </script>
   </header>
 
   <div class="bg-border my-6 h-px"></div>
