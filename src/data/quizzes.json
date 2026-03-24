@@ -1,15 +1,11 @@
 [
   {
-    "date": "Week 5",
-    "details": "Economy formative quiz — in the lecture"
-  },
-  {
-    "date": "Week 6",
-    "details": "Machine Learning Quiz 1 — in tutorial time"
-  },
-  {
-    "date": "Week 7 (after Eid el Fitr)",
+    "date": "Week 9",
     "details": "Control quiz"
+  },
+  {
+    "date": "Week 8",
+    "details": "Distributed quiz — with the midterm"
   },
   {
     "date": "Midterm week",
