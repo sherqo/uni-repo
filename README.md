@@ -30,3 +30,5 @@ Live at [uni-repo.sherqo.me](https://uni-repo.sherqo.me). Pushes to `main` auto-
 ## Contributing
 
 Feel free to open issues or PRs! Vibe coding is welcome, but please try to keep things organized and accurate. If you have any questions, reach out to me [sherqo@sherqo.me](mailto:sherqo@sherqo.me).
+
+just chill!
