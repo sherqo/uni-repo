@@ -52,7 +52,7 @@ export async function getLastCommitInfo(): Promise<CommitInfo> {
     if (commit.author) {
       author = commit.author.login || commit.commit?.author?.name || 'unknown';
       avatar = commit.author.avatar_url || '';
-      profile = commit.author.html_url || '';
+      profile = commit.html_url || '';
     } else if (commit.commit?.author) {
       author = commit.commit.author.name || 'unknown';
     }
