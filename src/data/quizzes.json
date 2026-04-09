@@ -1,6 +1,11 @@
 [
-  {
-    "date": "Week 9",
-    "details": "Control quiz"
-  }
+  { "date": "12/4", "details": "Agile Lab 5 & 6" },
+  { "date": "13/4", "details": "Economy team selection deadline" },
+  { "date": "14/4", "details": "Embedded Assignment 3 & 4" },
+  { "date": "17/4", "details": "Agile Phase 1 submission" },
+  { "date": "23/4", "details": "Network Ops Project 1 discussion" },
+  { "date": "30/4", "details": "Network Ops Project 2 discussion" },
+  { "date": "14/5", "details": "Embedded project" },
+  { "date": "14/5", "details": "IoT project" },
+  { "date": "17/5", "details": "Control project deadline (Week 14)" }
 ]

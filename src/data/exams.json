@@ -1,13 +1,1 @@
-[
-  { "date": "27/3 4:30", "details": "Distributed computing" },
-  { "date": "28/3 10:30", "details": "Adv Embedded" },
-  { "date": "29/3 10:30", "details": "DL" },
-  { "date": "29/3 12:30", "details": "ML" },
-  { "date": "29/3 2:30", "details": "Network operations" },
-  { "date": "30/3 10:30", "details": "Data Mining" },
-  { "date": "31/3 4:30", "details": "Control" },
-  { "date": "1/4 12:30", "details": "NLP" },
-  { "date": "1/4 4:30", "details": "IOT" },
-  { "date": "2/4 2:30", "details": "Economy" },
-  { "date": "3/4 2:30", "details": "Agile" }
-]
+[]
