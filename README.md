@@ -13,6 +13,7 @@ All content lives in `src/data/` as plain JSON files — no code needed. Edit th
 
 - `resources.json` — links & drive folders
 - `quizzes.json` — quiz dates
+- `exams.json` — exam dates
 - `recordings.json` — lecture/tutorial recordings
 - `credits.json` — contributors
 
