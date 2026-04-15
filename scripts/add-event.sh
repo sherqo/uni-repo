@@ -121,24 +121,23 @@ if [[ -z "$TITLE" || -z "$START_TIME" || -z "$SLUGS" ]]; then
 fi
 
 if [[ -n "$END_TIME" ]]; then
+  PAYLOAD=$(cat <<EOF
+{"secret":"$SECRET","title":"$TITLE","description":"$DESCRIPTION","start_time":"$START_TIME","end_time":"$END_TIME","slugs":"$SLUGS"}
+EOF
+)
   curl --fail-with-body --silent --show-error \
     -X POST "$API_URL" \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    --data-urlencode "secret=$SECRET" \
-    --data-urlencode "title=$TITLE" \
-    --data-urlencode "description=$DESCRIPTION" \
-    --data-urlencode "start_time=$START_TIME" \
-    --data-urlencode "end_time=$END_TIME" \
-    --data-urlencode "slugs=$SLUGS"
+    -H "Content-Type: application/json" \
+    --data "$PAYLOAD"
 else
+  PAYLOAD=$(cat <<EOF
+{"secret":"$SECRET","title":"$TITLE","description":"$DESCRIPTION","start_time":"$START_TIME","slugs":"$SLUGS"}
+EOF
+)
   curl --fail-with-body --silent --show-error \
     -X POST "$API_URL" \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    --data-urlencode "secret=$SECRET" \
-    --data-urlencode "title=$TITLE" \
-    --data-urlencode "description=$DESCRIPTION" \
-    --data-urlencode "start_time=$START_TIME" \
-    --data-urlencode "slugs=$SLUGS"
+    -H "Content-Type: application/json" \
+    --data "$PAYLOAD"
 fi
 
 printf '\n'
