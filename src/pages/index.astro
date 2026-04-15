@@ -6,13 +6,15 @@ import RecordingsSection from '@/components/sections/RecordingsSection.astro';
 import Credits from '@/components/sections/Credits.astro';
 
 import resources from '@/data/resources.json';
-import quizzes from '@/data/quizzes.json';
+import quizzesData from '@/data/quizzes.json';
 import recordings from '@/data/recordings.json';
 import staticContributors from '@/data/credits.json';
 import { getContributors } from '@/lib/getContributors';
 import { getLastCommitInfo } from '@/lib/getWeekInfo';
+import { getHomeEvents } from '@/lib/getHomeEvents';
 
 const lastCommitInfo = await getLastCommitInfo();
+const quizzes = await getHomeEvents(quizzesData);
 ---
 
 <PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">

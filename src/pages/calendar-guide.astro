@@ -1,0 +1,73 @@
+---
+import { createClient } from '@supabase/supabase-js';
+import PageLayout from '@/components/layouts/PageLayout.astro';
+
+export const prerender = false;
+
+const url = import.meta.env.SUPABASE_URL;
+const key = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
+
+let slugs: { slug: string; name: string }[] = [];
+
+if (url && key) {
+  const supabase = createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+
+  const { data } = await supabase.from('calendars').select('slug, name').order('slug', { ascending: true });
+  slugs = data ?? [];
+}
+
+const base = Astro.url.origin;
+const allUrl = `${base}/api/calendar.ics?category=all`;
+---
+
+<PageLayout title="Calendar Guide" description="How to subscribe to calendar feeds and all available slugs.">
+  <section class="space-y-6">
+    <header class="space-y-2">
+      <h1 class="m-0 text-3xl font-bold tracking-tight">Calendar Subscription Guide</h1>
+      <p class="text-muted-foreground m-0 text-sm">
+        Use the ICS URLs below to subscribe in Google Calendar, Apple Calendar, Outlook, or any app that supports webcal/ics feeds.
+      </p>
+    </header>
+
+    <div class="space-y-2 rounded-xl border border-white/10 p-4">
+      <h2 class="m-0 text-xl font-semibold">Global Feed</h2>
+      <p class="m-0 text-sm">All events from all slugs:</p>
+      <code class="block overflow-x-auto rounded bg-black/30 px-3 py-2 text-xs">{allUrl}</code>
+    </div>
+
+    <div class="space-y-3 rounded-xl border border-white/10 p-4">
+      <h2 class="m-0 text-xl font-semibold">Available Slugs</h2>
+      {
+        slugs.length === 0 ? (
+          <p class="text-muted-foreground m-0 text-sm">No slugs found.</p>
+        ) : (
+          <ul class="m-0 space-y-2 p-0 list-none">
+            {slugs.map(item => {
+              const feedUrl = `${base}/api/calendar.ics?category=${encodeURIComponent(item.slug)}`;
+              return (
+                <li class="rounded-md border border-white/10 p-3">
+                  <div class="text-sm font-semibold">{item.slug}</div>
+                  <div class="text-muted-foreground text-xs">{item.name}</div>
+                  <code class="mt-2 block overflow-x-auto rounded bg-black/30 px-2 py-1 text-xs">{feedUrl}</code>
+                </li>
+              );
+            })}
+          </ul>
+        )
+      }
+    </div>
+
+    <div class="space-y-2 rounded-xl border border-white/10 p-4 text-sm">
+      <h2 class="m-0 text-xl font-semibold">Google Calendar Steps</h2>
+      <ol class="m-0 list-decimal space-y-1 pl-5">
+        <li>Open Google Calendar.</li>
+        <li>In the left sidebar, click the + near "Other calendars".</li>
+        <li>Click "From URL".</li>
+        <li>Paste one feed URL above.</li>
+        <li>Click "Add calendar".</li>
+      </ol>
+    </div>
+  </section>
+</PageLayout>

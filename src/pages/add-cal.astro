@@ -1,0 +1,190 @@
+---
+import PageLayout from '@/components/layouts/PageLayout.astro';
+---
+
+<PageLayout title="Add Calendar Event" description="Add events to public calendar feeds.">
+  <style is:inline>
+    #add-cal-form input,
+    #add-cal-form textarea {
+      background-color: #ffffff !important;
+      border: 1px solid #94a3b8 !important;
+      border-radius: 0.375rem !important;
+      color: #0f172a !important;
+      opacity: 1 !important;
+    }
+
+    #add-cal-form input::placeholder,
+    #add-cal-form textarea::placeholder {
+      color: #64748b !important;
+    }
+
+    .dark #add-cal-form input,
+    .dark #add-cal-form textarea {
+      background-color: #0f172a !important;
+      border-color: #64748b !important;
+      color: #f8fafc !important;
+    }
+  </style>
+
+  <section class="space-y-5">
+    <header class="space-y-2">
+      <h1 class="m-0 text-3xl font-bold tracking-tight">Add Calendar Event</h1>
+      <p class="text-muted-foreground m-0 text-sm">Post a new event to one or more category slugs for public ICS feeds.</p>
+    </header>
+
+    <form id="add-cal-form" class="space-y-4 rounded-xl border border-white/10 p-4">
+      <label class="block space-y-1">
+        <span class="text-sm font-medium">Secret</span>
+        <input
+          name="secret"
+          type="password"
+          required
+          class="w-full rounded-sm border-2 border-slate-400/80 bg-white/90 px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-500 dark:bg-slate-900/80 dark:text-slate-100"
+        />
+      </label>
+
+      <label class="block space-y-1">
+        <span class="text-sm font-medium">Title</span>
+        <input
+          name="title"
+          type="text"
+          required
+          class="w-full rounded-sm border-2 border-slate-400/80 bg-white/90 px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-500 dark:bg-slate-900/80 dark:text-slate-100"
+        />
+      </label>
+
+      <label class="block space-y-1">
+        <span class="text-sm font-medium">Description</span>
+        <textarea
+          name="description"
+          rows="3"
+          class="w-full rounded-sm border-2 border-slate-400/80 bg-white/90 px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-500 dark:bg-slate-900/80 dark:text-slate-100"></textarea>
+      </label>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="block space-y-1">
+          <span class="text-sm font-medium">Start (UTC)</span>
+          <input
+            name="start_time"
+            type="datetime-local"
+            required
+            class="w-full rounded-sm border-2 border-slate-400/80 bg-white/90 px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-500 dark:bg-slate-900/80 dark:text-slate-100"
+          />
+        </label>
+
+        <label class="block space-y-1">
+          <span class="text-sm font-medium">End (UTC, optional)</span>
+          <input
+            name="end_time"
+            type="datetime-local"
+            class="w-full rounded-sm border-2 border-slate-400/80 bg-white/90 px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-500 dark:bg-slate-900/80 dark:text-slate-100"
+          />
+        </label>
+      </div>
+
+      <label class="block space-y-1">
+        <span class="text-sm font-medium">Slugs (comma separated)</span>
+        <input
+          name="slugs"
+          type="text"
+          placeholder="common,ai,test"
+          required
+          class="w-full rounded-sm border-2 border-slate-400/80 bg-white/90 px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-sky-500 dark:border-slate-500 dark:bg-slate-900/80 dark:text-slate-100"
+        />
+      </label>
+
+      <div class="rounded-md border border-white/10 p-3 text-sm">
+        <div class="mb-2 flex items-center justify-between gap-3">
+          <strong>Available Slugs</strong>
+          <button
+            type="button"
+            id="load-slugs"
+            class="cursor-pointer rounded-md border border-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide">
+            Refresh
+          </button>
+        </div>
+        <pre id="slug-list" class="m-0 min-h-8 whitespace-pre-wrap text-xs text-slate-700 dark:text-slate-200">Click Refresh to load slugs</pre>
+      </div>
+
+      <button type="submit" class="cursor-pointer rounded-md bg-white px-4 py-2 text-sm font-semibold text-black">Add Event</button>
+    </form>
+
+    <pre id="result" class="m-0 min-h-12 whitespace-pre-wrap rounded-md border border-white/10 bg-black/30 p-3 text-xs"></pre>
+  </section>
+
+  <script is:inline>
+    const form = document.getElementById('add-cal-form');
+    const result = document.getElementById('result');
+    const slugList = document.getElementById('slug-list');
+    const loadSlugsBtn = document.getElementById('load-slugs');
+
+    async function loadSlugs(secret) {
+      if (!slugList) return;
+      if (!secret) {
+        slugList.textContent = 'Enter secret above, then press Refresh.';
+        return;
+      }
+
+      slugList.textContent = 'Loading slugs...';
+
+      try {
+        const response = await fetch(`/api/events?secret=${encodeURIComponent(secret)}`);
+        const payload = await response.json();
+
+        if (!response.ok) {
+          slugList.textContent = `${response.status} ${response.statusText}: ${payload.error || 'failed to load slugs'}`;
+          return;
+        }
+
+        const items = Array.isArray(payload.slugs) ? payload.slugs : [];
+        if (items.length === 0) {
+          slugList.textContent = 'No slugs found yet.';
+          return;
+        }
+
+        slugList.textContent = items.map(item => `- ${item.slug}${item.name ? ` (${item.name})` : ''}`).join('\n');
+      } catch (error) {
+        slugList.textContent = `Failed: ${error instanceof Error ? error.message : 'unknown error'}`;
+      }
+    }
+
+    loadSlugsBtn?.addEventListener('click', () => {
+      const formData = new FormData(form);
+      loadSlugs(String(formData.get('secret') || ''));
+    });
+
+    function toUtcIso(datetimeLocal) {
+      if (!datetimeLocal) return '';
+      return new Date(datetimeLocal).toISOString();
+    }
+
+    form?.addEventListener('submit', async event => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const payload = {
+        secret: String(formData.get('secret') || ''),
+        title: String(formData.get('title') || ''),
+        description: String(formData.get('description') || ''),
+        start_time: toUtcIso(String(formData.get('start_time') || '')),
+        end_time: toUtcIso(String(formData.get('end_time') || '')) || null,
+        slugs: String(formData.get('slugs') || ''),
+      };
+
+      result.textContent = 'Submitting...';
+
+      try {
+        const response = await fetch('/api/events', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        const body = await response.text();
+        result.textContent = `${response.status} ${response.statusText}\n${body}`;
+      } catch (error) {
+        result.textContent = `Request failed: ${error instanceof Error ? error.message : 'unknown error'}`;
+      }
+    });
+  </script>
+</PageLayout>

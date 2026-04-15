@@ -5,7 +5,7 @@ interface CalendarEvent {
   title: string;
   description: string | null;
   start_time: string;
-  end_time: string;
+  end_time: string | null;
   updated_at: string;
 }
 
@@ -67,7 +67,9 @@ export function buildIcsCalendar(calendarName: string, events: CalendarEvent[]):
     body.push(property('UID', event.id));
     body.push(property('DTSTAMP', formatUtcDate(event.updated_at || event.start_time)));
     body.push(property('DTSTART', formatUtcDate(event.start_time)));
-    body.push(property('DTEND', formatUtcDate(event.end_time)));
+    if (event.end_time) {
+      body.push(property('DTEND', formatUtcDate(event.end_time)));
+    }
     body.push(property('SUMMARY', escapeIcsText(event.title)));
 
     if (event.description && event.description.trim().length > 0) {
