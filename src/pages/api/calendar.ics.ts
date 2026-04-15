@@ -19,6 +19,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
 export const GET: APIRoute = async ({ request }) => {
   const requestUrl = new URL(request.url);
   const category = requestUrl.searchParams.get('category')?.trim() ?? '';
+  const normalizedCategory = category.toLowerCase();
 
   if (!category) {
     return new Response('Missing required query parameter: category', {
@@ -27,27 +28,42 @@ export const GET: APIRoute = async ({ request }) => {
     });
   }
 
-  const { data: calendar, error: calendarError } = await supabase.from('calendars').select('id, name').eq('slug', category).maybeSingle();
-
-  if (calendarError) {
-    return new Response('Failed to load calendar', {
-      status: 500,
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
-  }
-
-  if (!calendar) {
-    return new Response('Calendar not found', {
-      status: 404,
-      headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-    });
-  }
-
-  const { data: events, error: eventsError } = await supabase
+  let calendarName = 'All Calendars';
+  let eventsQuery = supabase
     .from('events')
     .select('id, title, description, start_time, end_time, updated_at')
-    .eq('calendar_id', calendar.id)
     .order('start_time', { ascending: true });
+
+  if (normalizedCategory !== 'all') {
+    const { data: calendar, error: calendarError } = await supabase
+      .from('calendars')
+      .select('id, name')
+      .eq('slug', normalizedCategory)
+      .maybeSingle();
+
+    if (calendarError) {
+      return new Response('Failed to load calendar', {
+        status: 500,
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      });
+    }
+
+    if (!calendar) {
+      return new Response('Calendar not found', {
+        status: 404,
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      });
+    }
+
+    calendarName = calendar.name;
+    eventsQuery = supabase
+      .from('events')
+      .select('id, title, description, start_time, end_time, updated_at, event_calendars!inner(calendar_id)')
+      .eq('event_calendars.calendar_id', calendar.id)
+      .order('start_time', { ascending: true });
+  }
+
+  const { data: events, error: eventsError } = await eventsQuery;
 
   if (eventsError) {
     return new Response('Failed to load events', {
@@ -56,7 +72,7 @@ export const GET: APIRoute = async ({ request }) => {
     });
   }
 
-  const ics = buildIcsCalendar(calendar.name, events ?? []);
+  const ics = buildIcsCalendar(calendarName, events ?? []);
 
   return new Response(ics, {
     status: 200,
