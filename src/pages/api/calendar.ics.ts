@@ -3,6 +3,8 @@ import type { APIRoute } from 'astro';
 
 import { buildIcsCalendar } from '@/lib/ics';
 
+export const prerender = false;
+
 const SUPABASE_URL = import.meta.env.SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
 
@@ -14,8 +16,9 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
 });
 
-export const GET: APIRoute = async ({ url }) => {
-  const category = url.searchParams.get('category')?.trim() ?? '';
+export const GET: APIRoute = async ({ request }) => {
+  const requestUrl = new URL(request.url);
+  const category = requestUrl.searchParams.get('category')?.trim() ?? '';
 
   if (!category) {
     return new Response('Missing required query parameter: category', {
