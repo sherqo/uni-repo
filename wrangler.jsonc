@@ -1,17 +1,24 @@
 {
-  "main": "dist/_worker.js/index.js",
+  "main": "@astrojs/cloudflare/entrypoints/server",
   "name": "uni-repo",
   "compatibility_date": "2025-09-27",
-  "compatibility_flags": [
-    "global_fetch_strictly_public",
-    "nodejs_compat"
-  ],
+  "compatibility_flags": ["global_fetch_strictly_public", "nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "dist"
+    "directory": "dist",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
-  "$schema": "node_modules/wrangler/config-schema.json"
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "routes": [
+    {
+      "pattern": "uni-repo.sherqo.me",
+      "zone_name": "sherqo.me",
+      "custom_domain": true,
+    },
+  ],
+
+  "workers_dev": false,
+  "preview_urls": true,
 }
