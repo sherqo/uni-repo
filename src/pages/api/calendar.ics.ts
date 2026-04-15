@@ -20,6 +20,7 @@ export const GET: APIRoute = async ({ request }) => {
   const requestUrl = new URL(request.url);
   const category = requestUrl.searchParams.get('category')?.trim() ?? '';
   const normalizedCategory = category.toLowerCase();
+  const oneWeekAgoIso = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
 
   if (!category) {
     return new Response('Missing required query parameter: category', {
@@ -32,6 +33,7 @@ export const GET: APIRoute = async ({ request }) => {
   let eventsQuery = supabase
     .from('events')
     .select('id, title, description, start_time, end_time, updated_at')
+    .gte('start_time', oneWeekAgoIso)
     .order('start_time', { ascending: true });
 
   if (normalizedCategory !== 'all') {
@@ -59,6 +61,7 @@ export const GET: APIRoute = async ({ request }) => {
     eventsQuery = supabase
       .from('events')
       .select('id, title, description, start_time, end_time, updated_at, event_calendars!inner(calendar_id)')
+      .gte('start_time', oneWeekAgoIso)
       .eq('event_calendars.calendar_id', calendar.id)
       .order('start_time', { ascending: true });
   }

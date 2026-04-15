@@ -6,6 +6,7 @@ export const prerender = false;
 const SUPABASE_URL = import.meta.env.SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
 const INGEST_API_SECRET = 'sharqawy'; // simple for now
+const DEPLOY_HOOK_URL = 'https://api.cloudflare.com/client/v4/workers/builds/deploy_hooks/06711064-e12f-4679-b8f6-9cef299f8152';
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set');
@@ -62,6 +63,17 @@ function parseSlugs(value: unknown): string[] {
 function isValidIsoDate(value: string): boolean {
   const date = new Date(value);
   return !Number.isNaN(date.getTime());
+}
+
+async function triggerDeployHook(): Promise<void> {
+  try {
+    const response = await fetch(DEPLOY_HOOK_URL, { method: 'POST' });
+    if (!response.ok) {
+      console.error('deploy hook failed', response.status, await response.text());
+    }
+  } catch (error) {
+    console.error('deploy hook request error', error);
+  }
 }
 
 async function parsePayload(request: Request): Promise<Payload | null> {
@@ -182,6 +194,8 @@ export const POST: APIRoute = async ({ request }) => {
     await supabase.from('events').delete().eq('id', event.id);
     return json(500, { error: 'Failed to attach event to calendars' });
   }
+
+  await triggerDeployHook();
 
   return json(201, {
     ok: true,
