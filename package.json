@@ -13,17 +13,18 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
+    "cf-typegen": "wrangler types",
     "clean": "rm -rf dist .astro",
+    "deploy": "bun run build && wrangler deploy",
     "dev": "astro dev --host",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "preview": "bun run build && wrangler dev",
-    "type-check": "astro check",
-    "deploy": "bun run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "type-check": "astro check"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.13",
+    "@supabase/supabase-js": "^2.57.4",
     "wrangler": "^4.81.0"
   },
   "devDependencies": {
