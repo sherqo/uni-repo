@@ -21,13 +21,12 @@ export async function getLastCommitInfo(): Promise<CommitInfo> {
     const url = `https://api.github.com/repos/${repo}/commits?per_page=1`;
     const headers: Record<string, string> = {
       Accept: 'application/vnd.github.v3+json',
+      'User-Agent': 'uni-repo/1.0',
     };
     const fromProcess = typeof process !== 'undefined' ? process.env?.GITHUB_TOKEN : undefined;
-    const fromImportMeta = typeof import.meta !== 'undefined' ? (import.meta as any).env?.GITHUB_TOKEN : undefined;
-    const fromGlobal = typeof globalThis !== 'undefined' ? (globalThis as any).GITHUB_TOKEN : undefined;
-    const token = fromProcess || fromImportMeta || fromGlobal || '';
+    const token = fromProcess;
     if (token) {
-      headers.Authorization = `token ${token}`;
+      headers.Authorization = `Bearer ${token}`;
     }
 
     const res = await fetch(url, { headers });

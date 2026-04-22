@@ -13,10 +13,7 @@ export interface Contributor {
  */
 function getGithubToken(): string {
   const fromProcess = typeof process !== 'undefined' ? process.env?.GITHUB_TOKEN : undefined;
-  const fromImportMeta = typeof import.meta !== 'undefined' ? (import.meta as any).env?.GITHUB_TOKEN : undefined;
-  const fromGlobal = typeof globalThis !== 'undefined' ? (globalThis as any).GITHUB_TOKEN : undefined;
-  const token = fromProcess || fromImportMeta || fromGlobal || '';
-  return token;
+  return fromProcess || '';
 }
 
 export async function getContributors(): Promise<Contributor[]> {
@@ -25,10 +22,11 @@ export async function getContributors(): Promise<Contributor[]> {
     const url = `https://api.github.com/repos/${repo}/contributors`;
     const headers: Record<string, string> = {
       Accept: 'application/vnd.github.v3+json',
+      'User-Agent': 'uni-repo/1.0',
     };
     const token = getGithubToken();
     if (token) {
-      headers['Authorization'] = `token ${token}`;
+      headers['Authorization'] = `Bearer ${token}`;
     }
 
     const res = await fetch(url + '?anon=1', { headers });
