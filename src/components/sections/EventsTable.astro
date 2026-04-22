@@ -1,17 +1,17 @@
 ---
-interface Quiz {
+interface Event {
   date: string;
   details: string | null;
 }
 
 interface Props {
-  quizzes: Quiz[];
+  events: Event[];
   title?: string;
   linkText?: string;
   linkHref?: string;
 }
 
-const { quizzes, title = 'Deadlines & Milestones', linkText, linkHref, ...otherProps } = Astro.props;
+const { events, title = 'Deadlines & Milestones', linkText, linkHref, ...otherProps } = Astro.props;
 ---
 
 <section class="space-y-4" {...otherProps}>
@@ -34,12 +34,12 @@ const { quizzes, title = 'Deadlines & Milestones', linkText, linkHref, ...otherP
     </thead>
     <tbody>
       {
-        quizzes.map((quiz, i) => {
-          const isTba = quiz.date === 'TBA' || !quiz.details;
+        events.map((event, i) => {
+          const isTba = event.date === 'TBA' || !event.details;
           return (
-            <tr class={i < quizzes.length - 1 ? 'border-border border-b' : ''}>
-              <td class={`py-2 pr-4 font-mono text-xs ${isTba ? 'text-muted-foreground' : 'text-foreground'}`}>{quiz.date}</td>
-              <td class={`py-2 ${isTba ? 'text-muted-foreground' : ''}`}>{quiz.details ?? '—'}</td>
+            <tr class={i < events.length - 1 ? 'border-border border-b' : ''}>
+              <td class={`py-2 pr-4 font-mono text-xs ${isTba ? 'text-muted-foreground' : 'text-foreground'}`}>{event.date}</td>
+              <td class={`py-2 ${isTba ? 'text-muted-foreground' : ''}`}>{event.details ?? '—'}</td>
             </tr>
           );
         })

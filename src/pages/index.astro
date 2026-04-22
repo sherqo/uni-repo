@@ -1,12 +1,12 @@
 ---
 import PageLayout from '@/components/layouts/PageLayout.astro';
 import ResourcesTable from '@/components/sections/ResourcesTable.astro';
-import QuizzesTable from '@/components/sections/QuizzesTable.astro';
+import EventsTable from '@/components/sections/EventsTable.astro';
 import RecordingsSection from '@/components/sections/RecordingsSection.astro';
 import Credits from '@/components/sections/Credits.astro';
 
 import resources from '@/data/resources.json';
-import quizzesData from '@/data/quizzes.json';
+import eventsData from '@/data/events.json';
 import recordings from '@/data/recordings.json';
 import staticContributors from '@/data/credits.json';
 import { getContributors } from '@/lib/getContributors';
@@ -14,7 +14,7 @@ import { getLastCommitInfo } from '@/lib/getWeekInfo';
 import { getHomeEvents } from '@/lib/getHomeEvents';
 
 const lastCommitInfo = await getLastCommitInfo();
-const quizzes = await getHomeEvents(quizzesData);
+const events = await getHomeEvents(eventsData);
 ---
 
 <PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
@@ -62,7 +62,7 @@ const quizzes = await getHomeEvents(quizzesData);
   <ResourcesTable id="resources" resources={resources} />
 
   <div class="bg-border my-6 h-px"></div>
-  <QuizzesTable id="quizzes" quizzes={quizzes} linkText="Need exam dates? See the Exams page." linkHref="/exams" />
+  <EventsTable id="events" events={events} linkText="Need exam dates? See the Exams page." linkHref="/exams" />
 
   <div class="bg-border my-6 h-px"></div>
   <RecordingsSection id="recordings" courses={recordings} />

@@ -1,14 +1,9 @@
 ---
 import PageLayout from '../components/layouts/PageLayout.astro';
-import QuizzesTable from '../components/sections/QuizzesTable.astro';
+import EventsTable from '../components/sections/EventsTable.astro';
 import exams from '../data/exams.json';
 ---
 
 <PageLayout>
-  <QuizzesTable
-    quizzes={exams}
-    title="Final Exams"
-    linkText="Looking for quizzes and assessments? See the main page."
-    linkHref="/#quizzes"
-  />
+  <EventsTable events={exams} title="Final Exams" linkText="Looking for quizzes and assessments? See the main page." linkHref="/#events" />
 </PageLayout>
