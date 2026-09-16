@@ -4,8 +4,8 @@ import PageLayout from '@/components/layouts/PageLayout.astro';
 
 export const prerender = false;
 
-const url = import.meta.env.SUPABASE_URL;
-const key = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
+const url = process.env.SUPABASE_URL;
+const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 let slugs: { slug: string; name: string }[] = [];
 
@@ -43,7 +43,7 @@ const allUrl = `${base}/api/calendar.ics?category=all`;
         slugs.length === 0 ? (
           <p class="text-muted-foreground m-0 text-sm">No slugs found.</p>
         ) : (
-          <ul class="m-0 space-y-2 p-0 list-none">
+          <ul class="m-0 list-none space-y-2 p-0">
             {slugs.map(item => {
               const feedUrl = `${base}/api/calendar.ics?category=${encodeURIComponent(item.slug)}`;
               return (

@@ -4,6 +4,20 @@ import EventsTable from '../components/sections/EventsTable.astro';
 import exams from '../data/exams.json';
 ---
 
-<PageLayout>
-  <EventsTable events={exams} title="Final Exams" linkText="Looking for quizzes and assessments? See the main page." linkHref="/#events" />
+<PageLayout title="Exams">
+  {
+    exams.length === 0 ? (
+      <section class="space-y-4">
+        <h1 class="mt-0 text-2xl font-semibold">Final Exams</h1>
+        <p class="text-muted-foreground text-sm">No exams announced yet. Dates will be added later.</p>
+      </section>
+    ) : (
+      <EventsTable
+        events={exams}
+        title="Final Exams"
+        linkText="Looking for quizzes and assessments? See the main page."
+        linkHref="/#events"
+      />
+    )
+  }
 </PageLayout>

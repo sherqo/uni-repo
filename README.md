@@ -1,6 +1,6 @@
-# CAIE 23P · Junior Repo
+# CAIE 23P · Senior Repo
 
-Voluntary student collaboration hub for CAIE 23P juniors at Ain Shams University.
+Voluntary student collaboration hub for CAIE 23P seniors at Ain Shams University.
 
 ## Stack
 

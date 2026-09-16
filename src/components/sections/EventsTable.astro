@@ -5,16 +5,17 @@ interface Event {
 }
 
 interface Props {
+  id?: string;
   events: Event[];
   title?: string;
   linkText?: string;
   linkHref?: string;
 }
 
-const { events, title = 'Deadlines & Milestones', linkText, linkHref, ...otherProps } = Astro.props;
+const { id = 'events', events, title = 'Deadlines & Milestones', linkText, linkHref, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-4" {...otherProps}>
+<section id={id} class="space-y-4" {...otherProps}>
   <h2 class="mt-0 text-2xl font-semibold">{title}</h2>
   {
     linkText && linkHref && (

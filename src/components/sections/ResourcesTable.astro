@@ -10,13 +10,14 @@ interface Resource {
 }
 
 interface Props {
+  id?: string;
   resources: Resource[];
 }
 
-const { resources, ...otherProps } = Astro.props;
+const { id = 'resources', resources, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-4" {...otherProps}>
+<section id={id} class="space-y-4" {...otherProps}>
   <h2 class="mt-0 text-2xl font-semibold">Links &amp; Resources</h2>
   <table class="not-prose w-full border-collapse text-sm">
     <tbody>
@@ -28,9 +29,15 @@ const { resources, ...otherProps } = Astro.props;
               {row.links.map((link, j) => (
                 <>
                   {j > 0 && <span class="text-muted-foreground mx-1">/</span>}
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
-                    {link.text}
-                  </a>
+                  {link.href === '#' ? (
+                    <a role="link" aria-disabled="true" class="text-muted-foreground cursor-not-allowed">
+                      {link.text}
+                    </a>
+                  ) : (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                      {link.text}
+                    </a>
+                  )}
                 </>
               ))}
             </td>

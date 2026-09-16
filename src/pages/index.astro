@@ -13,13 +13,17 @@ import { getContributors } from '@/lib/getContributors';
 import { getLastCommitInfo } from '@/lib/getWeekInfo';
 import { getHomeEvents } from '@/lib/getHomeEvents';
 
+export const prerender = false;
+
+Astro.response.headers.set('Cache-Control', 'public, max-age=0, s-maxage=60');
+
 const lastCommitInfo = await getLastCommitInfo();
 const events = await getHomeEvents(eventsData);
 ---
 
-<PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P juniors.">
+<PageLayout title="CAIE 23P" description="Voluntary student collaboration hub for CAIE 23P seniors.">
   <header class="mb-4 sm:mb-8">
-    <h1 class="mb-1 text-4xl font-bold tracking-tight">CAIE 23P · Junior Repo</h1>
+    <h1 class="mb-1 text-4xl font-bold tracking-tight">CAIE 23P · Senior Repo</h1>
     <p class="text-muted-foreground m-0 text-sm">
       Voluntary student collaboration. May contain mistakes. We're trying to keep things updated as possible.
     </p>
@@ -45,17 +49,8 @@ const events = await getHomeEvents(eventsData);
           </span>
         )
       }
-      · We are in
-      <strong class="text-foreground">Week <span id="current-week">?</span></strong>
     </p>
-    <script is:inline>
-      const start = new Date('2026-02-07T00:00:00.000Z');
-      const now = new Date();
-      const diffMs = now.getTime() - start.getTime();
-      const week = diffMs < 0 ? 1 : Math.floor(diffMs / (7 * 24 * 60 * 60 * 1000)) + 1;
-      const el = document.getElementById('current-week');
-      if (el) el.textContent = String(week);
-    </script>
+    <p class="text-muted-foreground m-0 mt-1 text-sm">Senior-year schedule to be added later.</p>
   </header>
 
   <div class="bg-border my-6 h-px"></div>

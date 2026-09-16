@@ -3,10 +3,9 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
-const SUPABASE_URL = import.meta.env.SUPABASE_URL;
-const SUPABASE_SERVICE_ROLE_KEY = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
-const INGEST_API_SECRET = 'sharqawy'; // simple for now
-const DEPLOY_HOOK_URL = 'https://api.cloudflare.com/client/v4/workers/builds/deploy_hooks/06711064-e12f-4679-b8f6-9cef299f8152';
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const INGEST_API_SECRET = process.env.INGEST_API_SECRET;
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set');
@@ -65,17 +64,6 @@ function isValidIsoDate(value: string): boolean {
   return !Number.isNaN(date.getTime());
 }
 
-async function triggerDeployHook(): Promise<void> {
-  try {
-    const response = await fetch(DEPLOY_HOOK_URL, { method: 'POST' });
-    if (!response.ok) {
-      console.error('deploy hook failed', response.status, await response.text());
-    }
-  } catch (error) {
-    console.error('deploy hook request error', error);
-  }
-}
-
 async function parsePayload(request: Request): Promise<Payload | null> {
   const contentType = request.headers.get('content-type') || '';
 
@@ -101,13 +89,26 @@ async function parsePayload(request: Request): Promise<Payload | null> {
 }
 
 export const POST: APIRoute = async ({ request }) => {
-  const payload = await parsePayload(request);
+  if (!INGEST_API_SECRET) {
+    return json(503, { error: 'Event ingestion is not configured' });
+  }
+
+  let payload: Payload | null;
+  try {
+    payload = await parsePayload(request);
+  } catch {
+    return json(400, { error: 'Invalid request body' });
+  }
 
   if (!payload) {
     return json(415, { error: 'Use application/json or form-urlencoded payloads' });
   }
 
-  const providedSecret = toStringValue(payload.secret) || toStringValue(request.headers.get('x-api-secret'));
+  if (typeof payload !== 'object' || Array.isArray(payload)) {
+    return json(400, { error: 'Request body must be an object' });
+  }
+
+  const providedSecret = toStringValue(request.headers.get('x-api-secret')) || toStringValue(payload.secret);
   if (providedSecret !== INGEST_API_SECRET) {
     return json(401, { error: 'Invalid secret' });
   }
@@ -195,8 +196,6 @@ export const POST: APIRoute = async ({ request }) => {
     return json(500, { error: 'Failed to attach event to calendars' });
   }
 
-  await triggerDeployHook();
-
   return json(201, {
     ok: true,
     event_id: event.id,
@@ -205,7 +204,11 @@ export const POST: APIRoute = async ({ request }) => {
 };
 
 export const GET: APIRoute = async ({ request }) => {
-  const secret = toStringValue(new URL(request.url).searchParams.get('secret')) || toStringValue(request.headers.get('x-api-secret'));
+  if (!INGEST_API_SECRET) {
+    return json(503, { error: 'Event ingestion is not configured' });
+  }
+
+  const secret = toStringValue(request.headers.get('x-api-secret'));
 
   if (secret !== INGEST_API_SECRET) {
     return json(401, { error: 'Invalid secret' });

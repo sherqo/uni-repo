@@ -32,3 +32,6 @@ pnpm-debug.log*
 !.dev.vars.example
 !.env.example
 package-lock.json
+.vercel
+.env*
+!.env.example

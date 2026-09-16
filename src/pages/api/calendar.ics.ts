@@ -5,8 +5,8 @@ import { buildIcsCalendar } from '@/lib/ics';
 
 export const prerender = false;
 
-const SUPABASE_URL = import.meta.env.SUPABASE_URL;
-const SUPABASE_SERVICE_ROLE_KEY = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set');
@@ -30,11 +30,12 @@ export const GET: APIRoute = async ({ request }) => {
   }
 
   let calendarName = 'All Calendars';
-  let eventsQuery = supabase
+  const eventsQuery = supabase
     .from('events')
     .select('id, title, description, start_time, end_time, updated_at')
     .gte('start_time', oneWeekAgoIso)
     .order('start_time', { ascending: true });
+  let filteredEventsQuery;
 
   if (normalizedCategory !== 'all') {
     const { data: calendar, error: calendarError } = await supabase
@@ -58,7 +59,7 @@ export const GET: APIRoute = async ({ request }) => {
     }
 
     calendarName = calendar.name;
-    eventsQuery = supabase
+    filteredEventsQuery = supabase
       .from('events')
       .select('id, title, description, start_time, end_time, updated_at, event_calendars!inner(calendar_id)')
       .gte('start_time', oneWeekAgoIso)
@@ -66,7 +67,7 @@ export const GET: APIRoute = async ({ request }) => {
       .order('start_time', { ascending: true });
   }
 
-  const { data: events, error: eventsError } = await eventsQuery;
+  const { data: events, error: eventsError } = await (filteredEventsQuery ?? eventsQuery);
 
   if (eventsError) {
     return new Response('Failed to load events', {

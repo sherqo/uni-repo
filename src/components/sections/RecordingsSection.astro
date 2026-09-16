@@ -17,14 +17,16 @@ interface Course {
 }
 
 interface Props {
+  id?: string;
   courses: Course[];
 }
 
-const { courses, ...otherProps } = Astro.props;
+const { id = 'recordings', courses, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-4" {...otherProps}>
-  <h2 class="mt-0 text-2xl font-semibold">Recordings – Spring 2026</h2>
+<section id={id} class="space-y-4" {...otherProps}>
+  <h2 class="mt-0 text-2xl font-semibold">Senior Course Recordings</h2>
+  {courses.length === 0 && <p class="text-muted-foreground text-sm">New courses and recordings will be added later.</p>}
   <p class="text-muted-foreground m-0 text-sm">
     MS Teams recordings expire in 60 days — save them before they're gone. If you see one expiring soon, download it and upload it to
     YouTube so everyone keeps access. <a href="/about#contribute" class="text-primary hover:underline">See how.</a>

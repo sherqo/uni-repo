@@ -38,8 +38,8 @@ function buildDetails(event: EventRow): string {
 }
 
 export async function getHomeEvents(fallback: HomeEventRow[]): Promise<HomeEventRow[]> {
-  const url = import.meta.env.SUPABASE_URL;
-  const key = import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (!url || !key) {
     return fallback;

@@ -7,26 +7,25 @@ interface Contributor {
 }
 
 interface Props {
+  id?: string;
   contributors: Contributor[];
 }
 
-const { contributors, ...otherProps } = Astro.props;
+const { id = 'credits', contributors, ...otherProps } = Astro.props;
 ---
 
-<section class="space-y-2 pb-4" {...otherProps}>
+<section id={id} class="space-y-2 pb-4" {...otherProps}>
   <h2 class="mt-0 text-2xl font-semibold">Credits</h2>
   <p class="text-muted-foreground m-0 text-sm">Thanks to all contributors ❤️</p>
 
   {
     (() => {
-      // compute live and static lists; static contributors are currently
-      // hidden, but you can reinstate them by rendering `old` below
       const live = contributors.filter(c => !c.static);
-      const old = contributors.filter(c => c.static);
+      const visible = live.length > 0 ? live : contributors.filter(c => c.static);
       return (
         <>
           <p class="text-muted-foreground text-sm">
-            {live.map((c, i) => (
+            {visible.map((c, i) => (
               <>
                 {i > 0 && <span class="mx-1"> </span>}
                 {c.link ? (
@@ -43,18 +42,6 @@ const { contributors, ...otherProps } = Astro.props;
               </>
             ))}
           </p>
-          {/*
-          {old.length > 0 && (
-            <p class="text-muted-foreground text-xs mt-1">
-              {old.map((c, i) => (
-                <>
-                  {i > 0 && <span class="mx-1"> </span>}
-                  ...
-                </>
-              ))}
-            </p>
-          )}
-          */}
         </>
       );
     })()

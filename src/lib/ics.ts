@@ -32,15 +32,18 @@ function escapeIcsText(value: string): string {
 }
 
 function foldIcsLine(line: string): string {
-  if (line.length <= 75) return line;
-
+  const encoder = new TextEncoder();
   let folded = '';
-  let cursor = 0;
+  let octets = 0;
 
-  while (cursor < line.length) {
-    const chunk = line.slice(cursor, cursor + 75);
-    folded += cursor === 0 ? chunk : `${CRLF} ${chunk}`;
-    cursor += 75;
+  for (const character of line) {
+    const length = encoder.encode(character).length;
+    if (octets + length > 75) {
+      folded += `${CRLF} `;
+      octets = 1;
+    }
+    folded += character;
+    octets += length;
   }
 
   return folded;
