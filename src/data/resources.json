@@ -3,8 +3,8 @@
     "label": "Schedules",
     "links": [
       {
-        "href": "#",
-        "text": "To be added later"
+        "href": "https://docs.google.com/spreadsheets/d/1SxMf5ucwZzz-mTYFdfCQDEUIgyzlVEUn/edit?gid=1575604292#gid=1575604292",
+        "text": "Timetable"
       }
     ]
   },
@@ -12,8 +12,21 @@
     "label": "Drives",
     "links": [
       {
-        "href": "#",
-        "text": "To be added later"
+        "href": "https://drive.google.com/drive/folders/15NcbBEEw4SToOX71R3l-pBCrU_Tqde1X?usp=drive_link",
+        "text": "Fall 2026 Drive"
+      }
+    ]
+  },
+  {
+    "label": "Notes",
+    "links": [
+      {
+        "href": "https://sherqo.notion.site/uni-notes",
+        "text": "Sherqo Notes"
+      },
+      {
+        "href": "https://instinctive-vibraphone-aaa.notion.site/Semester-7-3e6026d78d36807bb56be98251ed6c1f?source=copy_link",
+        "text": "Esraa notes (Semester 7)"
       }
     ]
   },
@@ -56,7 +69,7 @@
     "label": "Course Tree",
     "links": [
       {
-        "href": "https://drive.google.com/file/d/1V5IjmNdtNmETQJMOFf3w5vhUftLPRAIZ/view?usp=drive_link",
+        "href": "https://drive.google.com/file/d/1nEP2Q7N3x81YQYRudLc7Kssv7EyreQ2C/view?usp=drive_link",
         "text": "Updated 23P course tree"
       }
     ]
