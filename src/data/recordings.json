@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "course": "CSE461: Cryptography and Security",
+    "sessions": [
+      {
+        "label": "Lectures Playlist · Dr. Ayman Bahaa",
+        "links": [
+          {
+            "href": "https://youtube.com/playlist?list=PLy_2fgXkPiZt3oJcHalAWy9uhQ3wd2fTV&si=SwthRjB4rYmi20JW",
+            "text": "YouTube Playlist"
+          }
+        ],
+        "badge": null,
+        "expires": "never"
+      }
+    ]
+  }
+]
